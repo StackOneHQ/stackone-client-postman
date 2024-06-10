@@ -437,8 +437,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,full_name,display_name,created_at,updated_at",
+                                    "value": "id,remote_id,name,full_name,display_name,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -459,11 +464,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -514,7 +514,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,full_name,display_name,created_at,updated_at",
+                                    "value": "id,remote_id,name,full_name,display_name,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -570,8 +570,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -593,16 +598,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[employee_number]",
-                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -701,7 +696,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number",
                                     "type": "string"
                                 },
                                 {
@@ -816,8 +811,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,approver_id,status,type,start_date,end_date,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -838,11 +838,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -950,7 +945,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,approver_id,status,type,start_date,end_date,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -1115,8 +1110,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,path,type,contents,created_at,updated_at",
+                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -1137,11 +1137,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -1201,7 +1196,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,path,type,contents,created_at,updated_at",
+                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 }
                             ],
@@ -1264,8 +1259,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,type,sub_type,document,valid_from,valid_to,issued_by,number",
+                                    "value": "id,remote_id,type,sub_type,document,valid_from,valid_to,issued_by,number",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -1286,11 +1286,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -1398,7 +1393,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,type,sub_type,document,valid_from,valid_to,issued_by,number",
+                                    "value": "id,remote_id,type,sub_type,document,valid_from,valid_to,issued_by,number",
                                     "type": "string"
                                 }
                             ],
@@ -1513,8 +1508,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -1539,8 +1539,8 @@
                                     "type": "string"
                                 },
                                 {
-                                    "key": "filter[updated_after]",
-                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "key": "expand",
+                                    "value": "groups",
                                     "type": "string"
                                 }
                             ]
@@ -1590,7 +1590,12 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "groups",
                                     "type": "string"
                                 }
                             ],
@@ -1646,8 +1651,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,name,phone_number,street_1,street_2,city,state,zip_code,country,location_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,name,phone_number,street_1,street_2,city,state,zip_code,country,location_type,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -1668,11 +1678,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -1723,7 +1728,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,name,phone_number,street_1,street_2,city,state,zip_code,country,location_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,name,phone_number,street_1,street_2,city,state,zip_code,country,location_type,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -1779,8 +1784,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,approver_id,status,type,start_date,end_date,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -1801,11 +1811,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -1895,7 +1900,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,employee_id,approver_id,status,type,start_date,end_date,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -1998,8 +2003,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,benefit_type,provider,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,benefit_type,provider,description,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2020,11 +2030,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -2075,7 +2080,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,benefit_type,provider,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,benefit_type,provider,description,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -2131,8 +2136,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,type,parent_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2153,11 +2163,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -2208,7 +2213,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,type,parent_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
                                     "type": "string"
                                 }
                             ],
@@ -2269,8 +2274,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,candidate_id,job_id,interview_stage,interview_stage_id,rejected_reason,rejected_reason_id,rejected_reason_ids,rejected_reasons,rejected_at,location_id,location_ids,status,application_status,questionnaires,attachments,result_links,created_at,updated_at,documents,candidate",
+                                    "value": "id,remote_id,candidate_id,remote_candidate_id,job_id,remote_job_id,interview_stage,interview_stage_id,remote_interview_stage_id,rejected_reason,rejected_reason_id,remote_rejected_reason_id,rejected_reason_ids,remote_rejected_reason_ids,rejected_reasons,rejected_at,location_id,remote_location_id,location_ids,remote_location_ids,status,application_status,questionnaires,attachments,result_links,source,created_at,updated_at,documents,candidate",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2292,16 +2302,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[job_id]",
-                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2405,7 +2405,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,candidate_id,job_id,interview_stage,interview_stage_id,rejected_reason,rejected_reason_id,rejected_reason_ids,rejected_reasons,rejected_at,location_id,location_ids,status,application_status,questionnaires,attachments,result_links,created_at,updated_at,documents,candidate",
+                                    "value": "id,remote_id,candidate_id,remote_candidate_id,job_id,remote_job_id,interview_stage,interview_stage_id,remote_interview_stage_id,rejected_reason,rejected_reason_id,remote_rejected_reason_id,rejected_reason_ids,remote_rejected_reason_ids,rejected_reasons,rejected_at,location_id,remote_location_id,location_ids,remote_location_ids,status,application_status,questionnaires,attachments,result_links,source,created_at,updated_at,documents,candidate",
                                     "type": "string"
                                 },
                                 {
@@ -2515,8 +2515,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
+                                    "value": "id,remote_id,application_id,remote_application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2537,11 +2542,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -2606,7 +2606,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
+                                    "value": "id,remote_id,application_id,remote_application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
                                     "type": "string"
                                 }
                             ],
@@ -2669,8 +2669,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,sections,label,candidate_id,application_id,interview_id,author_id,overall_recommendation,created_at,updated_at",
+                                    "value": "id,remote_id,sections,label,candidate_id,remote_candidate_id,application_id,remote_application_id,interview_id,remote_interview_id,author_id,remote_author_id,overall_recommendation,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2691,11 +2696,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -2760,7 +2760,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,sections,label,candidate_id,application_id,interview_id,author_id,overall_recommendation,created_at,updated_at",
+                                    "value": "id,remote_id,sections,label,candidate_id,remote_candidate_id,application_id,remote_application_id,interview_id,remote_interview_id,author_id,remote_author_id,overall_recommendation,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -2772,6 +2772,55 @@
                                 },
                                 {
                                     "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Upload Application Document",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/applications/{id}/documents/upload",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "applications",
+                                ":id",
+                                "documents",
+                                "upload"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
                                     "value": "<value>",
                                     "type": "string"
                                 }
@@ -2876,8 +2925,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,path,type,contents,created_at,updated_at",
+                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -2898,11 +2952,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -2967,7 +3016,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,path,type,contents,created_at,updated_at",
+                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 }
                             ],
@@ -3028,8 +3077,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,hired_at,created_at,updated_at",
+                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3050,11 +3104,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3149,7 +3198,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,hired_at,created_at,updated_at",
+                                    "value": "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -3254,8 +3303,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,content,author_id,visibility,created_at,updated_at,deleted_at",
+                                    "value": "id,remote_id,content,author_id,remote_author_id,visibility,created_at,updated_at,deleted_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3276,11 +3330,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3393,7 +3442,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,content,author_id,visibility,created_at,updated_at,deleted_at",
+                                    "value": "id,remote_id,content,author_id,remote_author_id,visibility,created_at,updated_at,deleted_at",
                                     "type": "string"
                                 }
                             ],
@@ -3454,8 +3503,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name",
+                                    "value": "id,remote_id,name",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3476,11 +3530,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3536,7 +3585,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name",
+                                    "value": "id,remote_id,name",
                                     "type": "string"
                                 }
                             ],
@@ -3592,8 +3641,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,order,created_at,updated_at",
+                                    "value": "id,remote_id,name,order,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3614,11 +3668,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3674,7 +3723,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,order,created_at,updated_at",
+                                    "value": "id,remote_id,name,order,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -3730,8 +3779,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,interview_stage_id,interview_stage,status,interview_status,interviewer_ids,interview_parts,interviewers,start_at,end_at,meeting_url,created_at,updated_at",
+                                    "value": "id,remote_id,application_id,remote_application_id,interview_stage_id,remote_interview_stage_id,interview_stage,status,interview_status,interviewer_ids,remote_interviewer_ids,interview_parts,interviewers,start_at,end_at,meeting_url,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3752,11 +3806,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3812,7 +3861,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,interview_stage_id,interview_stage,status,interview_status,interviewer_ids,interview_parts,interviewers,start_at,end_at,meeting_url,created_at,updated_at",
+                                    "value": "id,remote_id,application_id,remote_application_id,interview_stage_id,remote_interview_stage_id,interview_stage,status,interview_status,interviewer_ids,remote_interviewer_ids,interview_parts,interviewers,start_at,end_at,meeting_url,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -3868,8 +3917,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,code,title,status,job_status,department_ids,location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -3890,11 +3944,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -3955,12 +4004,145 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,code,title,status,job_status,department_ids,location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
                                     "key": "expand",
                                     "value": "job_postings,interview_stages",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get all Lists",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/lists",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "lists"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,created_at,updated_at,items,type",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get List",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/lists/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "lists",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,created_at,updated_at,items,type",
                                     "type": "string"
                                 }
                             ],
@@ -4016,8 +4198,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name",
+                                    "value": "id,remote_id,name",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4038,11 +4225,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -4098,7 +4280,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name",
+                                    "value": "id,remote_id,name",
                                     "type": "string"
                                 }
                             ],
@@ -4154,8 +4336,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,label,type,rejected_reason_type",
+                                    "value": "id,remote_id,label,type,rejected_reason_type",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4176,11 +4363,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -4236,7 +4418,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,label,type,rejected_reason_type",
+                                    "value": "id,remote_id,label,type,rejected_reason_type",
                                     "type": "string"
                                 }
                             ],
@@ -4292,8 +4474,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,email",
+                                    "value": "id,remote_id,first_name,last_name,name,email",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4314,11 +4501,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -4374,7 +4556,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,email",
+                                    "value": "id,remote_id,first_name,last_name,name,email",
                                     "type": "string"
                                 }
                             ],
@@ -4430,8 +4612,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,title,locations,internal,status,job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
+                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4452,11 +4639,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -4517,7 +4699,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,title,locations,internal,status,job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
+                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
                                     "type": "string"
                                 },
                                 {
@@ -4578,8 +4760,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
+                                    "value": "id,remote_id,application_id,remote_application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4600,11 +4787,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -4699,7 +4881,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
+                                    "value": "id,remote_id,application_id,remote_application_id,start_date,status,offer_status,salary,currency,created_at,updated_at,offer_history",
                                     "type": "string"
                                 }
                             ],
@@ -4760,8 +4942,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,company_name,emails,phone_numbers,deal_ids,account_ids,created_at,updated_at",
+                                    "value": "id,remote_id,first_name,last_name,company_name,emails,phone_numbers,deal_ids,remote_deal_ids,account_ids,remote_account_ids,custom_fields,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -4786,8 +4973,8 @@
                                     "type": "string"
                                 },
                                 {
-                                    "key": "filter[updated_after]",
-                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ]
@@ -4876,7 +5063,12 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,company_name,emails,phone_numbers,deal_ids,account_ids,created_at,updated_at",
+                                    "value": "id,remote_id,first_name,last_name,company_name,emails,phone_numbers,deal_ids,remote_deal_ids,account_ids,remote_account_ids,custom_fields,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ],
@@ -4979,8 +5171,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,owner_id,name,description,industries,annual_revenue,website,addresses,phone_numbers,created_at,updated_at",
+                                    "value": "id,remote_id,owner_id,remote_owner_id,name,description,industries,annual_revenue,website,addresses,phone_numbers,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5001,11 +5198,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -5056,7 +5248,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,owner_id,name,description,industries,annual_revenue,website,addresses,phone_numbers,created_at,updated_at",
+                                    "value": "id,remote_id,owner_id,remote_owner_id,name,description,industries,annual_revenue,website,addresses,phone_numbers,created_at,updated_at",
                                     "type": "string"
                                 }
                             ],
@@ -5112,8 +5304,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,created_at,updated_at,items,type",
+                                    "value": "id,remote_id,name,created_at,updated_at,items,type",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5134,11 +5331,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -5189,7 +5381,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,created_at,updated_at,items,type",
+                                    "value": "id,remote_id,name,created_at,updated_at,items,type",
                                     "type": "string"
                                 }
                             ],
@@ -5250,8 +5442,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,primary_email_address,username,roles,groups,status,avatar,is_bot_user,last_active_at,last_login_at,created_at,updated_at,multi_factor_enabled",
+                                    "value": "id,remote_id,first_name,last_name,name,primary_email_address,username,roles,groups,status,avatar,is_bot_user,last_active_at,last_login_at,created_at,updated_at,multi_factor_enabled",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5272,11 +5469,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -5332,7 +5524,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,first_name,last_name,name,primary_email_address,username,roles,groups,status,avatar,is_bot_user,last_active_at,last_login_at,created_at,updated_at,multi_factor_enabled",
+                                    "value": "id,remote_id,first_name,last_name,name,primary_email_address,username,roles,groups,status,avatar,is_bot_user,last_active_at,last_login_at,created_at,updated_at,multi_factor_enabled",
                                     "type": "string"
                                 },
                                 {
@@ -5393,8 +5585,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,type,policies,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,type,policies,description,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5415,11 +5612,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -5475,7 +5667,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,type,policies,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,type,policies,description,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -5536,8 +5728,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,parent_id,name,description,roles,type,created_at,updated_at",
+                                    "value": "id,remote_id,parent_id,remote_parent_id,name,description,roles,type,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5558,11 +5755,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -5618,7 +5810,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,parent_id,name,description,roles,type,created_at,updated_at",
+                                    "value": "id,remote_id,parent_id,remote_parent_id,name,description,roles,type,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -5679,8 +5871,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,permissions,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,permissions,description,created_at,updated_at",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5701,11 +5898,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 },
@@ -5761,7 +5953,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,permissions,description,created_at,updated_at",
+                                    "value": "id,remote_id,name,permissions,description,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -5828,8 +6020,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -5850,11 +6047,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -5946,7 +6138,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
                                 }
                             ],
@@ -6051,8 +6243,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -6073,11 +6270,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -6169,7 +6361,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
                                 }
                             ],
@@ -6274,8 +6466,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -6296,11 +6493,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -6392,7 +6584,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,messages,created_at,updated_at,tags",
+                                    "value": "id,remote_id,name,messages,created_at,updated_at,tags",
                                     "type": "string"
                                 }
                             ],
@@ -6496,8 +6688,13 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,created_at,updated_at,description,schedule_type,status,channels,first_sent_at,last_sent_at,tags,messages",
+                                    "value": "id,remote_id,name,created_at,updated_at,description,schedule_type,status,channels,first_sent_at,last_sent_at,tags,messages",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
                                 },
                                 {
                                     "key": "page",
@@ -6518,11 +6715,6 @@
                                 },
                                 {
                                     "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter[updated_after]",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
@@ -6573,7 +6765,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,name,created_at,updated_at,description,schedule_type,status,channels,first_sent_at,last_sent_at,tags,messages",
+                                    "value": "id,remote_id,name,created_at,updated_at,description,schedule_type,status,channels,first_sent_at,last_sent_at,tags,messages",
                                     "type": "string"
                                 }
                             ],
