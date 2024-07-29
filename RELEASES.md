@@ -39,3 +39,11 @@ Based on:
 - Speakeasy CLI 1.345.4 (2.378.3) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [postman v0.0.7] .
+
+## 2024-07-29 13:57:09
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.346.3 (2.379.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [postman v0.0.8] .
