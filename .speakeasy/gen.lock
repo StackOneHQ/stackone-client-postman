@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
 management:
-  docChecksum: c97627bf41e3f3e4b526ba0405c78709
+  docChecksum: dc0627fbb386c5f911ff7c21bec373b1
   docVersion: 1.0.0
-  speakeasyVersion: 1.346.3
-  generationVersion: 2.379.6
-  releaseVersion: 0.0.8
-  configChecksum: e4b77b33b10f045749824564b568f428
+  speakeasyVersion: 1.352.2
+  generationVersion: 2.385.2
+  releaseVersion: 0.0.9
+  configChecksum: ac38b72e4f7b88dd8e59abafd566d4c4
   repoURL: https://github.com/StackOneHQ/stackone-client-postman.git
 features:
   postman:
@@ -14,7 +14,7 @@ features:
     core: 0.1.8
     deprecations: 0.0.0
     examples: 0.1.0
-    globalSecurity: 0.1.0
+    globalSecurity: 0.1.1
     globalServerURLs: 0.1.0
     groups: 0.1.0
     nameOverrides: 0.1.0
