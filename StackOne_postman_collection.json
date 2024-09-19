@@ -570,7 +570,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
                                     "type": "string"
                                 },
                                 {
@@ -696,7 +696,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_title,job_description,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
                                     "type": "string"
                                 },
                                 {
@@ -966,6 +966,56 @@
                     }
                 },
                 {
+                    "name": "Batch Upload Employee Document",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/documents/upload/batch",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "documents",
+                                "upload",
+                                "batch"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "Upload Employee Document",
                     "request": {
                         "method": "POST",
@@ -1110,7 +1160,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
+                                    "value": "id,remote_id,name,path,type,category,category_id,remote_category_id,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 },
                                 {
@@ -1196,7 +1246,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
+                                    "value": "id,remote_id,name,path,type,category,category_id,remote_category_id,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 }
                             ],
@@ -3135,6 +3185,102 @@
                     }
                 },
                 {
+                    "name": "Move Application",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/applications/{id}/move",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "applications",
+                                ":id",
+                                "move"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Reject Application",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/applications/{id}/reject",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "applications",
+                                ":id",
+                                "reject"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "Get Application Offer",
                     "request": {
                         "method": "GET",
@@ -3651,7 +3797,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
+                                    "value": "id,remote_id,name,path,type,category,category_id,remote_category_id,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 },
                                 {
@@ -3742,7 +3888,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,path,type,category,contents,created_at,updated_at,remote_url,file_format",
+                                    "value": "id,remote_id,name,path,type,category,category_id,remote_category_id,contents,created_at,updated_at,remote_url,file_format",
                                     "type": "string"
                                 }
                             ],
@@ -4543,6 +4689,178 @@
                     }
                 },
                 {
+                    "name": "List Job Custom Field Definitions",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/custom_field_definitions/jobs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "custom_field_definitions",
+                                "jobs"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "sync_token",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Job Custom Field Definition",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/custom_field_definitions/jobs/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "custom_field_definitions",
+                                "jobs",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "sync_token",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "List Departments",
                     "request": {
                         "method": "GET",
@@ -4997,7 +5315,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -5035,6 +5353,11 @@
                                 {
                                     "key": "expand",
                                     "value": "job_postings,interview_stages",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ]
@@ -5084,12 +5407,17 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
                                     "key": "expand",
                                     "value": "job_postings,interview_stages",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "custom_fields",
                                     "type": "string"
                                 }
                             ],
@@ -6154,7 +6482,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "<value>",
+                                    "value": "assessment_id,remote_assessment_id,candidate,score,assessment_date,submission_date,summary,result,result_url,attachments",
                                     "type": "string"
                                 }
                             ],
@@ -6213,7 +6541,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "<value>",
+                                    "value": "assessment_id,remote_assessment_id,candidate,score,assessment_date,submission_date,summary,result,result_url,attachments",
                                     "type": "string"
                                 }
                             ],
@@ -8823,7 +9151,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,active,duration,categories,skills,updated_at,created_at",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,url,active,duration,categories,skills,updated_at,created_at",
                                     "type": "string"
                                 },
                                 {
@@ -8900,7 +9228,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,active,duration,categories,skills,updated_at,created_at",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,url,active,duration,categories,skills,updated_at,created_at",
                                     "type": "string"
                                 }
                             ],
@@ -8958,7 +9286,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,course_id,remote_course_id,updated_at,created_at,due_date,status",
+                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status",
                                     "type": "string"
                                 },
                                 {
@@ -8986,6 +9314,16 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "c28xyrc55866bvuv",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "remote_user_id",
+                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
                                     "type": "string"
                                 }
                             ],
@@ -9059,6 +9397,46 @@
                                     "value": "<value>",
                                     "type": "string"
                                 }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Batch Upsert Content",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/content/batch",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "content",
+                                "batch"
                             ]
                         },
                         "description": ""
@@ -9323,7 +9701,7 @@
                     }
                 },
                 {
-                    "name": "Get User Completion",
+                    "name": "List User Completions",
                     "request": {
                         "method": "GET",
                         "header": [
@@ -9365,7 +9743,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,user_id,remote_user_id,completed_at,updated_at,created_at,result",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -9393,6 +9771,16 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "746359",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "remote_user_id",
+                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
                                     "type": "string"
                                 }
                             ],
@@ -9443,6 +9831,213 @@
                                 "users",
                                 ":id",
                                 "completions"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get User Completion",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/users/{id}/completions/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "users",
+                                ":id",
+                                "completions",
+                                ":subResourceId"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Completions",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/completions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "completions"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "746359",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "remote_user_id",
+                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Completion",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/completions/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "completions",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
                             ],
                             "variable": [
                                 {
@@ -9629,7 +10224,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,email,phone_number,created_at,updated_at,name",
+                                    "value": "id,remote_id,external_reference,active,email,phone_number,created_at,updated_at,name",
                                     "type": "string"
                                 },
                                 {
@@ -9706,7 +10301,283 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,email,phone_number,created_at,updated_at,name",
+                                    "value": "id,remote_id,external_reference,active,email,phone_number,created_at,updated_at,name",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Skill",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/skills/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "skills",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active,level",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Skills",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/skills",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "skills"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active,level",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Assignments",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/assignments",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "assignments"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "c28xyrc55866bvuv",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "remote_user_id",
+                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Assignment",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/assignments/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "assignments",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "<value>",
                                     "type": "string"
                                 }
                             ],
