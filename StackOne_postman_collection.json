@@ -100,7 +100,7 @@
                             "query": [
                                 {
                                     "key": "page",
-                                    "value": 0,
+                                    "value": "5488.14",
                                     "type": "number"
                                 },
                                 {
@@ -5366,6 +5366,45 @@
                     }
                 },
                 {
+                    "name": "Create Job",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/jobs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "jobs"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "Get Job",
                     "request": {
                         "method": "GET",
@@ -5420,6 +5459,53 @@
                                     "value": "custom_fields",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Job",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/jobs/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "jobs",
+                                ":id"
                             ],
                             "variable": [
                                 {
@@ -9743,7 +9829,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -9771,16 +9857,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "user_id",
-                                    "value": "746359",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "remote_user_id",
-                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
                                     "type": "string"
                                 }
                             ],
@@ -9948,7 +10024,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -9976,16 +10052,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "user_id",
-                                    "value": "746359",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "remote_user_id",
-                                    "value": "e3cb75bf-aa84-466e-a6c1-b8322b257a48",
                                     "type": "string"
                                 }
                             ]
@@ -10092,7 +10158,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,active",
+                                    "value": "id,remote_id,name,active,level",
                                     "type": "string"
                                 }
                             ],
@@ -10148,7 +10214,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,active",
+                                    "value": "id,remote_id,name,active,level",
                                     "type": "string"
                                 },
                                 {
