@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
 management:
-  docChecksum: 17ec3916d7a4b1bd06fa13c2a397704e
+  docChecksum: 757e7f01a1b8adffe405effc714cd96b
   docVersion: 1.0.0
-  speakeasyVersion: 1.411.1
-  generationVersion: 2.436.1
-  releaseVersion: 0.0.12
-  configChecksum: a64755e0be229beb61c193b6800d1714
+  speakeasyVersion: 1.418.3
+  generationVersion: 2.438.3
+  releaseVersion: 0.0.13
+  configChecksum: 40556f96b653efad6caa6bc2570f7c82
   repoURL: https://github.com/StackOneHQ/stackone-client-postman.git
 features:
   postman:
@@ -532,7 +532,7 @@ examples:
           x-account-id: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "type": {"value": "team"}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Engineering", "parent_ids": ["cxIQNjUyNDM0", "cxIQNjQzNzI0MQ"], "remote_parent_ids": ["652434", "6437241"], "owner_ids": ["cxIQNjUyEDM0", "cxIQNjQzNzA0MQ"], "remote_owner_ids": ["475364", "4327652"], "type": {"value": "team"}}}
   hris_get_department_group:
     "":
       parameters:
@@ -544,7 +544,7 @@ examples:
           x-account-id: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "type": {"value": "department"}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Engineering", "parent_ids": ["cxIQNjUyNDM0", "cxIQNjQzNzI0MQ"], "remote_parent_ids": ["652434", "6437241"], "owner_ids": ["cxIQNjUyEDM0", "cxIQNjQzNzA0MQ"], "remote_owner_ids": ["475364", "4327652"], "type": {"value": "department"}}}
   hris_list_jobs:
     "":
       parameters:
@@ -2046,3 +2046,27 @@ examples:
       responses:
         "200":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1"}}
+  hris_list_cost_center_groups:
+    "":
+      parameters:
+        query:
+          fields: "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids"
+          filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
+          updated_after: "2020-01-01T00:00:00.000Z"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Engineering", "parent_ids": ["cxIQNjUyNDM0", "cxIQNjQzNzI0MQ"], "remote_parent_ids": ["652434", "6437241"], "owner_ids": ["cxIQNjUyEDM0", "cxIQNjQzNzA0MQ"], "remote_owner_ids": ["475364", "4327652"], "type": {"value": "team"}}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Engineering", "parent_ids": ["cxIQNjUyNDM0", "cxIQNjQzNzI0MQ"], "remote_parent_ids": ["652434", "6437241"], "owner_ids": ["cxIQNjUyEDM0", "cxIQNjQzNzA0MQ"], "remote_owner_ids": ["475364", "4327652"], "type": {"value": "team"}}]}
+  hris_get_cost_center_group:
+    "":
+      parameters:
+        path:
+          id: "<id>"
+        query:
+          fields: "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Engineering", "parent_ids": ["cxIQNjUyNDM0", "cxIQNjQzNzI0MQ"], "remote_parent_ids": ["652434", "6437241"], "owner_ids": ["cxIQNjUyEDM0", "cxIQNjQzNzA0MQ"], "remote_owner_ids": ["475364", "4327652"], "type": {"value": "team"}}}
