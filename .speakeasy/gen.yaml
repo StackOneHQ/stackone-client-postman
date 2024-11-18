@@ -11,8 +11,9 @@ generation:
     requestResponseComponentNamesFeb2024: true
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
 postman:
-  version: 0.0.13
+  version: 0.0.14
   imports:
     option: openapi
     paths:
