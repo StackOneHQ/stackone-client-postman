@@ -133,6 +133,13 @@
                                         {}
                                     ],
                                     "type": "array"
+                                },
+                                {
+                                    "key": "status",
+                                    "value": [
+                                        {}
+                                    ],
+                                    "type": "array"
                                 }
                             ]
                         },
@@ -276,6 +283,56 @@
             ]
         },
         {
+            "name": "Webhooks",
+            "item": [
+                {
+                    "name": "post /webhooks/{id}/events",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[\n  {\n    \"event\": \"hris_employees.created\",\n    \"record_id\": \"<value>\"\n  }\n]"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/webhooks/{id}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "webhooks",
+                                ":id",
+                                "events"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "7151.89",
+                                    "type": "number"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
             "name": "Connectors",
             "item": [
                 {
@@ -301,7 +358,7 @@
                             "query": [
                                 {
                                     "key": "include",
-                                    "value": "field_path,unmapped_fields,resources,inactive,webhooks",
+                                    "value": "field_path,unmapped_fields,resources,inactive,webhooks,static_fields",
                                     "type": "string"
                                 }
                             ]
@@ -333,7 +390,7 @@
                             "query": [
                                 {
                                     "key": "include",
-                                    "value": "field_path,unmapped_fields,resources,inactive,webhooks",
+                                    "value": "field_path,unmapped_fields,resources,inactive,webhooks,static_fields",
                                     "type": "string"
                                 }
                             ],
@@ -515,6 +572,168 @@
                                 {
                                     "key": "fields",
                                     "value": "id,remote_id,name,full_name,display_name,created_at,updated_at",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List employee Custom Field Definitions",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/custom_field_definitions/employees",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "custom_field_definitions",
+                                "employees"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get employee Custom Field Definition",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/custom_field_definitions/employees/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "custom_field_definitions",
+                                "employees",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
                             ],
@@ -1693,7 +1912,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -1775,7 +1994,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -1838,7 +2057,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -1873,6 +2092,54 @@
                                     "value": "groups",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create Employee Employment",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/employments",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "employments"
                             ],
                             "variable": [
                                 {
@@ -1929,7 +2196,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -1937,6 +2204,60 @@
                                     "value": "groups",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Employee Employment",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/employments/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "employments",
+                                ":subResourceId"
                             ],
                             "variable": [
                                 {
@@ -2294,6 +2615,139 @@
                                 "hris",
                                 "time_off",
                                 ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List time off types",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/time_off_types",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "time_off_types"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get time off type",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/time_off_types/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "time_off_types",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active",
+                                    "type": "string"
+                                }
                             ],
                             "variable": [
                                 {
@@ -4550,11 +5004,6 @@
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
-                                    "type": "string"
                                 }
                             ]
                         },
@@ -4632,11 +5081,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
                                     "type": "string"
                                 }
                             ],
@@ -4722,11 +5166,6 @@
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
-                                    "type": "string"
                                 }
                             ]
                         },
@@ -4804,11 +5243,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
                                     "type": "string"
                                 }
                             ],
@@ -4894,11 +5328,6 @@
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
-                                    "type": "string"
                                 }
                             ]
                         },
@@ -4976,11 +5405,6 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "sync_token",
-                                    "value": "<value>",
                                     "type": "string"
                                 }
                             ],
@@ -7276,6 +7700,168 @@
                         },
                         "description": ""
                     }
+                },
+                {
+                    "name": "List Contact Custom Field Definitions",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/crm/custom_field_definitions/contacts",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "crm",
+                                "custom_field_definitions",
+                                "contacts"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Contact Custom Field Definition",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/crm/custom_field_definitions/contacts/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "crm",
+                                "custom_field_definitions",
+                                "contacts",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": {
+                                        "Value": false
+                                    },
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,options",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": {
+                                        "Value": "25"
+                                    },
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
                 }
             ]
         },
@@ -9332,6 +9918,46 @@
             "name": "lms",
             "item": [
                 {
+                    "name": "Batch Upsert Course",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/courses/batch",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "courses",
+                                "batch"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "List Courses",
                     "request": {
                         "method": "GET",
@@ -9372,7 +9998,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,url,active,duration,categories,skills,updated_at,created_at",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content",
                                     "type": "string"
                                 },
                                 {
@@ -9402,6 +10028,45 @@
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Upsert Course",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/courses",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "courses"
                             ]
                         },
                         "description": ""
@@ -9449,7 +10114,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,course_type,cover_url,url,active,duration,categories,skills,updated_at,created_at",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content",
                                     "type": "string"
                                 }
                             ],
@@ -9507,7 +10172,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status",
+                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status,progress,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -9704,7 +10369,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,categories,order",
+                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at",
                                     "type": "string"
                                 },
                                 {
@@ -9743,45 +10408,6 @@
                     "name": "Upsert Content",
                     "request": {
                         "method": "PUT",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{}"
-                        },
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/lms/content",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "lms",
-                                "content"
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "Create Content",
-                    "request": {
-                        "method": "POST",
                         "header": [
                             {
                                 "key": "x-account-id",
@@ -9859,56 +10485,9 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,categories,order",
+                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at",
                                     "type": "string"
                                 }
-                            ],
-                            "variable": [
-                                {
-                                    "key": "id",
-                                    "value": "<value>",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "Update Content",
-                    "request": {
-                        "method": "PATCH",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{}"
-                        },
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/lms/content/{id}",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "lms",
-                                "content",
-                                ":id"
                             ],
                             "variable": [
                                 {
@@ -9964,7 +10543,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -10159,7 +10738,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -10691,7 +11270,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status",
+                                    "value": "id,remote_id,user_id,remote_user_id,course_id,remote_course_id,updated_at,created_at,due_date,status,progress,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
                                     "type": "string"
                                 },
                                 {
@@ -10781,6 +11360,92 @@
                                     "value": "<value>",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create Collection",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/collections",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "collections"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Collection",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/collections/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "collections",
+                                ":id"
                             ],
                             "variable": [
                                 {
