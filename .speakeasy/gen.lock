@@ -1,17 +1,17 @@
 lockVersion: 2.0.0
 id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
 management:
-  docChecksum: 7b46b68feb854c7d130acb06a56346bf
+  docChecksum: 08ec67373a56aa94d292abbc5778ee52
   docVersion: 1.0.0
-  speakeasyVersion: 1.440.1
-  generationVersion: 2.460.1
-  releaseVersion: 0.0.14
-  configChecksum: 22e737f861d50e60e51c314a651de27b
+  speakeasyVersion: 1.453.3
+  generationVersion: 2.474.6
+  releaseVersion: 0.0.15
+  configChecksum: 16bee8a80e080518c7b36d51e8d27837
   repoURL: https://github.com/StackOneHQ/stackone-client-postman.git
 features:
   postman:
     constsAndDefaults: 0.1.0
-    core: 0.1.18
+    core: 0.1.19
     deprecations: 0.0.0
     examples: 0.1.0
     globalSecurity: 0.1.1
@@ -25,17 +25,17 @@ examples:
   stackone_create_connect_session:
     speakeasy-default-stackone-create-connect-session:
       requestBody:
-        application/json: {"categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "ats", "lms"], "origin_owner_id": "<value>", "origin_owner_name": "<value>"}
+        application/json: {"categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "ats", "documents"], "origin_owner_id": "<value>", "origin_owner_name": "<value>"}
       responses:
         "201":
-          application/json: {"id": "908.71", "organization_id": "5651.81", "project_id": "<value>", "categories": ["ats", "hris", "marketing", "crm", "iam", "marketing", "lms", "ats", "ats"], "origin_owner_id": "<value>", "origin_owner_name": "<value>", "created_at": "2023-12-14T02:49:15.703Z", "token": "<value>"}
+          application/json: {"id": "908.71", "organization_id": "5651.81", "project_id": "<value>", "categories": ["ats", "hris", "lms", "crm", "iam", "marketing", "lms", "marketing", "documents"], "origin_owner_id": "<value>", "origin_owner_name": "<value>", "created_at": "2023-12-14T02:49:15.703Z", "token": "<value>", "auth_link_url": "https://brisk-widow.biz/"}
   stackone_authenticate_connect_session:
     speakeasy-default-stackone-authenticate-connect-session:
       requestBody:
         application/json: {"token": "<value>"}
       responses:
         "201":
-          application/json: {"id": "3607.71", "organization_id": "7851.08", "project_id": "<value>", "categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "hris-legacy", "marketing"], "origin_owner_id": "<value>", "origin_owner_name": "<value>", "created_at": "2023-10-03T14:09:45.532Z"}
+          application/json: {"id": "3607.71", "organization_id": "7851.08", "project_id": "<value>", "categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "hris-legacy", "documents"], "origin_owner_id": "<value>", "origin_owner_name": "<value>", "created_at": "2023-10-03T14:09:45.532Z"}
   stackone_list_linked_accounts:
     speakeasy-default-stackone-list-linked-accounts:
       responses:
@@ -126,7 +126,7 @@ examples:
     "":
       parameters:
         query:
-          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
+          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           updated_after: "2020-01-01T00:00:00.000Z"
           expand: "company,employments,work_location,home_location,custom_fields,groups"
@@ -142,7 +142,7 @@ examples:
         header:
           x-account-id: "<value>"
       requestBody:
-        application/json: {"first_name": "Issac", "last_name": "Newton", "name": "Issac Newton", "display_name": "Sir Issac Newton", "avatar_url": "https://example.com/avatar.png", "personal_email": "isaac.newton@example.com", "personal_phone_number": "+1234567890", "work_email": "newton@example.com", "work_phone_number": "+1234567890", "job_id": "R-6789", "job_title": "Physicist", "department_id": "3093", "department": "Physics", "manager_id": "67890", "preferred_language": {"value": "eng"}, "date_of_birth": "1990-01-01T00:00.000Z", "birthday": "2021-01-01T00:00:00Z", "hire_date": "2021-01-01T00:00.000Z", "start_date": "2021-01-01T00:00.000Z", "tenure": 2, "work_anniversary": "2021-01-01T00:00:00Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "termination_date": "2021-01-01T00:00:00Z", "company_name": "Example Corp", "citizenships": [], "employments": [], "custom_fields": [], "benefits": [], "national_identity_number": {"value": "123456789", "type": {"value": "ssn"}, "country": {"value": "US"}}, "home_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "work_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"first_name": "Issac", "last_name": "Newton", "name": "Issac Newton", "display_name": "Sir Issac Newton", "avatar_url": "https://example.com/avatar.png", "personal_email": "isaac.newton@example.com", "personal_phone_number": "+1234567890", "work_email": "newton@example.com", "work_phone_number": "+1234567890", "job_id": "R-6789", "job_title": "Physicist", "department_id": "3093", "department": "Physics", "manager_id": "67890", "date_of_birth": "1990-01-01T00:00.000Z", "birthday": "2021-01-01T00:00:00Z", "hire_date": "2021-01-01T00:00.000Z", "start_date": "2021-01-01T00:00.000Z", "tenure": 2, "work_anniversary": "2021-01-01T00:00:00Z", "termination_date": "2021-01-01T00:00:00Z", "company_name": "Example Corp", "citizenships": [], "employments": [], "custom_fields": [], "benefits": [], "national_identity_number": {"value": "123456789", "type": {"value": "ssn"}, "country": {"value": "US"}}, "home_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "work_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -152,7 +152,7 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
+          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
           expand: "company,employments,work_location,home_location,custom_fields,groups"
           include: "avatar_url,avatar,custom_fields,job_description,benefits"
         header:
@@ -168,7 +168,7 @@ examples:
         header:
           x-account-id: "<value>"
       requestBody:
-        application/json: {"first_name": "Issac", "last_name": "Newton", "name": "Issac Newton", "display_name": "Sir Issac Newton", "avatar_url": "https://example.com/avatar.png", "personal_email": "isaac.newton@example.com", "personal_phone_number": "+1234567890", "work_email": "newton@example.com", "work_phone_number": "+1234567890", "job_id": "R-6789", "job_title": "Physicist", "department_id": "3093", "department": "Physics", "manager_id": "67890", "preferred_language": {"value": "eng"}, "date_of_birth": "1990-01-01T00:00.000Z", "birthday": "2021-01-01T00:00:00Z", "hire_date": "2021-01-01T00:00.000Z", "start_date": "2021-01-01T00:00.000Z", "tenure": 2, "work_anniversary": "2021-01-01T00:00:00Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "termination_date": "2021-01-01T00:00:00Z", "company_name": "Example Corp", "citizenships": [], "employments": [], "custom_fields": [], "benefits": [], "national_identity_number": {"value": "123456789", "type": {"value": "ssn"}, "country": {"value": "US"}}, "home_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "work_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"first_name": "Issac", "last_name": "Newton", "name": "Issac Newton", "display_name": "Sir Issac Newton", "avatar_url": "https://example.com/avatar.png", "personal_email": "isaac.newton@example.com", "personal_phone_number": "+1234567890", "work_email": "newton@example.com", "work_phone_number": "+1234567890", "job_id": "R-6789", "job_title": "Physicist", "department_id": "3093", "department": "Physics", "manager_id": "67890", "date_of_birth": "1990-01-01T00:00.000Z", "birthday": "2021-01-01T00:00:00Z", "hire_date": "2021-01-01T00:00.000Z", "start_date": "2021-01-01T00:00.000Z", "tenure": 2, "work_anniversary": "2021-01-01T00:00:00Z", "termination_date": "2021-01-01T00:00:00Z", "company_name": "Example Corp", "citizenships": [], "employments": [], "custom_fields": [], "benefits": [], "national_identity_number": {"value": "123456789", "type": {"value": "ssn"}, "country": {"value": "US"}}, "home_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "work_location": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Woolsthorpe Manor", "phone_number": "+44 1476 860 364", "street_1": "Water Lane", "street_2": "Woolsthorpe by Colsterworth", "city": "Grantham", "zip_code": "NG33 5NR", "country": {"value": "US"}, "passthrough": {"other_known_names": "John Doe"}}, "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "200":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -590,7 +590,7 @@ examples:
         header:
           x-account-id: "<value>"
       requestBody:
-        application/json: {"passthrough": {"other_known_names": "John Doe"}, "job_id": "4071538b-3cac-4fbf-ac76-f78ed250ffdd", "location_id": "dd8d41d1-5eb8-4408-9c87-9ba44604eae4", "application_status": {"value": "hired", "source_value": "Hired"}, "questionnaires": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "answers": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {"value": "short_text", "source_value": "Short Text"}, "values": ["Yes", "No Travel", "It sounds pretty cool.", "Excel", "Power Point"]}]}], "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}, "candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "candidate": {"passthrough": {"other_known_names": "John Doe"}, "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "phone_number": "+1234567890", "name": "Romain Sestier", "first_name": "Romain", "last_name": "Sestier", "email": "sestier.romain123@gmail.com", "social_links": [], "company": "Company Inc.", "title": "Software Engineer", "hired_at": "2021-01-01T01:01:01.000Z", "country": "United States", "custom_fields": []}}
+        application/json: {"passthrough": {"other_known_names": "John Doe"}, "job_id": "4071538b-3cac-4fbf-ac76-f78ed250ffdd", "location_id": "dd8d41d1-5eb8-4408-9c87-9ba44604eae4", "application_status": {"value": "hired", "source_value": "Hired"}, "questionnaires": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "answers": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "values": ["Yes", "No Travel", "It sounds pretty cool.", "Excel", "Power Point"]}]}], "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}, "candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "candidate": {"passthrough": {"other_known_names": "John Doe"}, "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "phone_number": "+1234567890", "name": "Romain Sestier", "first_name": "Romain", "last_name": "Sestier", "email": "sestier.romain123@gmail.com", "social_links": [], "company": "Company Inc.", "title": "Software Engineer", "hired_at": "2021-01-01T01:01:01.000Z", "country": "United States", "custom_fields": []}}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -781,7 +781,7 @@ examples:
     "":
       parameters:
         query:
-          fields: "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at"
+          fields: "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,country,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           updated_after: "2020-01-01T00:00:00.000Z"
           include: "custom_fields"
@@ -806,7 +806,7 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at"
+          fields: "id,remote_id,name,first_name,last_name,email,emails,social_links,phone,phone_numbers,company,country,title,application_ids,remote_application_ids,hired_at,custom_fields,created_at,updated_at"
           include: "custom_fields"
         header:
           x-account-id: "<value>"
@@ -847,7 +847,7 @@ examples:
         header:
           x-account-id: "<value>"
       requestBody:
-        application/json: {"content": [], "author_id": "1234567890", "visibility": {"value": "public", "source_value": "Public"}, "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"content": [], "author_id": "1234567890", "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -1219,31 +1219,31 @@ examples:
           x-account-id: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Skill Assessment", "type": {"value": "responsibilities", "source_value": "key_responsibilities"}, "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}}
   ats_get_assessments_request:
     "":
       parameters:
         path:
           id: "<id>"
         query:
-          fields: "assessment_id,remote_assessment_id,candidate,score,assessment_date,submission_date,summary,result,result_url,attachments"
+          fields: "id,remote_id,package,application,job,candidate,requester,results_update_url"
         header:
           x-account-id: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "assessment_id": "f15aad8e-8db6-4194-8299-a525eb8fc30f", "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "profile_url": "https://exmaple.com/candidate?id=xyz"}, "score": {"label": "Percentage", "value": "80", "min": "0", "max": "100"}, "assessment_date": "2021-01-01T01:01:01.000Z", "submission_date": "2021-01-01T01:01:01.000Z", "summary": "Candidate demonstrates strong understanding of core concepts, but struggles with application", "result": {"value": "passed", "source_value": "Passed"}, "result_url": "https://exmaple.com/result?id=xyz", "attachments": {"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "profile_url": "https://exmaple.com/candidate?id=xyz"}}}
   ats_get_assessments_result:
     "":
       parameters:
         path:
           id: "<id>"
         query:
-          fields: "assessment_id,remote_assessment_id,candidate,score,assessment_date,submission_date,summary,result,result_url,attachments"
+          fields: "id,remote_id,candidate,score,start_date,submission_date,summary,result,result_url,attachments"
         header:
           x-account-id: "<value>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "assessment_id": "f15aad8e-8db6-4194-8299-a525eb8fc30f", "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "profile_url": "https://exmaple.com/candidate?id=xyz"}, "score": {"label": "Percentage", "value": "80", "min": "0", "max": "100"}, "assessment_date": "2021-01-01T01:01:01.000Z", "submission_date": "2021-01-01T01:01:01.000Z", "summary": "Candidate demonstrates strong understanding of core concepts, but struggles with application", "result": {"value": "passed", "source_value": "Passed"}, "result_url": "https://exmaple.com/result?id=xyz", "attachments": {"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "profile_url": "https://exmaple.com/candidate?id=xyz"}, "score": {"label": "Percentage", "value": "80", "min": "0", "max": "100"}, "submission_date": "2021-01-01T01:01:01.000Z", "summary": "Candidate demonstrates strong understanding of core concepts, but struggles with application", "result": {"value": "passed", "source_value": "Passed"}, "result_url": "https://exmaple.com/result?id=xyz", "attachments": [{"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}]}}
   crm_list_contacts:
     "":
       parameters:
@@ -1810,7 +1810,7 @@ examples:
     "":
       parameters:
         query:
-          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at"
+          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,short_description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           updated_after: "2020-01-01T00:00:00.000Z"
         header:
@@ -1824,7 +1824,7 @@ examples:
         header:
           x-account-id: "<value>"
       requestBody:
-        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "course_ids": ["16873-SOFTWARE-ENG-COURSE"], "title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "languages": [], "content_url": "https://www.youtube.com/watch?v=16873", "cover_url": "https://www.googledrive.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "order": 1, "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}]}
+        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "course_ids": ["16873-SOFTWARE-ENG-COURSE"], "title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "languages": [], "content_url": "https://www.youtube.com/watch?v=16873", "cover_url": "https://www.googledrive.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "order": 1, "categories": [{"name": "Information-Technology"}]}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1"}}
@@ -1844,7 +1844,7 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at"
+          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,short_description,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at"
         header:
           x-account-id: "<value>"
       responses:
@@ -2116,10 +2116,10 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_period": {"value": "hour", "source_value": "Hour"}, "pay_frequency": {"value": "hourly", "source_value": "Hourly"}, "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "time_worked": "P0Y0M0DT8H0M0S", "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "time_worked": "P0Y0M0DT8H0M0S", "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "201":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_period": {"value": "hour", "source_value": "Hour"}, "pay_frequency": {"value": "hourly", "source_value": "Hourly"}, "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "time_worked": "P0Y0M0DT8H0M0S", "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "time_worked": "P0Y0M0DT8H0M0S", "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}
   hris_update_employee_employment:
     speakeasy-default-hris-update-employee-employment:
       parameters:
@@ -2129,10 +2129,10 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_period": {"value": "hour", "source_value": "Hour"}, "pay_frequency": {"value": "hourly", "source_value": "Hourly"}, "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "time_worked": "P0Y0M0DT8H0M0S", "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "time_worked": "P0Y0M0DT8H0M0S", "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_period": {"value": "hour", "source_value": "Hour"}, "pay_frequency": {"value": "hourly", "source_value": "Hourly"}, "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "employment_type": {"value": "permanent", "source_value": "Permanent"}, "time_worked": "P0Y0M0DT8H0M0S", "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "job_title": "Software Engineer", "pay_rate": "40.00", "pay_currency": "USD", "effective_date": "2021-01-01T01:01:01.000Z", "time_worked": "P0Y0M0DT8H0M0S", "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}
   hris_list_time_off_types:
     "":
       parameters:
@@ -2189,7 +2189,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"items": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}], "content": [{"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873", "order": 1}, {"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873", "order": 1}]}, {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [{"value": "en_GB"}, {"value": "en_GB"}], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}], "content": []}]}
+        application/json: {"items": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "content": [{"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873"}], "categories": [{"name": "Information-Technology"}]}, {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [{"value": "en_GB"}, {"value": "en_GB"}], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "content": [{"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873"}], "categories": [{"name": "Information-Technology"}]}]}
       responses:
         "202":
           application/json: {"statusCode": 202, "message": "Batch operation accepted", "timestamp": "2021-01-01T01:01:01.000Z", "errors": [["Missing field: name"], [], []]}
@@ -2199,7 +2199,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [{"value": "en_GB"}], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}], "content": [{"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873", "order": 1}]}
+        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1", "content_ids": ["16873-SOFTWARE-ENG-Content"], "title": "Software Engineer Lv 1", "description": "This course acts as learning content for software engineers.", "languages": [{"value": "en_GB"}], "cover_url": "https://www.googledrive.com/?v=16873", "url": "https://www.linkedinlearning.com/?v=16873", "active": true, "duration": "P3Y6M4DT12H30M5S", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "content": [{"title": "Software Engineer Lv 1", "description": "This video acts as learning content for software engineers.", "content_url": "https://www.youtube.com/watch?v=16873"}], "categories": [{"name": "Information-Technology"}]}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "external_reference": "SOFTWARE-ENG-LV1-TRAINING-VIDEO-1"}}
@@ -2209,7 +2209,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-collection-1", "learning_object_ids": ["16873-SOFTWARE-ENG-COURSE", "16874-SOFTWARE-ENG-COURSE"], "remote_learning_object_ids": ["e3cb75bf-aa84-466e-a6c1-b8322b257a48", "e3cb75bf-aa84-466e-a6c1-b8322b257a49"], "title": "Software Engineer Lv 1 Collection", "description": "This collection acts as learning pathway for software engineers.", "cover_url": "https://www.googledrive.com/?v=16873", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}]}
+        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-collection-1", "learning_object_ids": ["16873-SOFTWARE-ENG-COURSE", "16874-SOFTWARE-ENG-COURSE"], "remote_learning_object_ids": ["e3cb75bf-aa84-466e-a6c1-b8322b257a48", "e3cb75bf-aa84-466e-a6c1-b8322b257a49"], "title": "Software Engineer Lv 1 Collection", "description": "This collection acts as learning pathway for software engineers.", "cover_url": "https://www.googledrive.com/?v=16873", "skills": [{"name": "Information-Technology"}], "categories": [{"name": "Information-Technology"}]}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -2221,7 +2221,78 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-collection-1", "learning_object_ids": ["16873-SOFTWARE-ENG-COURSE", "16874-SOFTWARE-ENG-COURSE"], "remote_learning_object_ids": ["e3cb75bf-aa84-466e-a6c1-b8322b257a48", "e3cb75bf-aa84-466e-a6c1-b8322b257a49"], "title": "Software Engineer Lv 1 Collection", "description": "This collection acts as learning pathway for software engineers.", "cover_url": "https://www.googledrive.com/?v=16873", "skills": [{"id": "16873-IT345", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Information-Technology"}], "categories": [{"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "name": "Information-Technology"}]}
+        application/json: {"unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "external_reference": "SOFTWARE-ENG-LV1-TRAINING-collection-1", "learning_object_ids": ["16873-SOFTWARE-ENG-COURSE", "16874-SOFTWARE-ENG-COURSE"], "remote_learning_object_ids": ["e3cb75bf-aa84-466e-a6c1-b8322b257a48", "e3cb75bf-aa84-466e-a6c1-b8322b257a49"], "title": "Software Engineer Lv 1 Collection", "description": "This collection acts as learning pathway for software engineers.", "cover_url": "https://www.googledrive.com/?v=16873", "skills": [{"name": "Information-Technology"}], "categories": [{"name": "Information-Technology"}]}
       responses:
         "201":
           application/json: {"statusCode": 200, "message": "Record updated successfully.", "timestamp": "2021-01-01T01:01:01.000Z"}
+  ats_list_background_check_packages:
+    "":
+      parameters:
+        query:
+          fields: "id,remote_id,name,description,tests"
+          filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
+          updated_after: "2020-01-01T00:00:00.000Z"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}]}]}
+  ats_create_background_check_package:
+    speakeasy-default-ats-create-background-check-package:
+      parameters:
+        header:
+          x-account-id: "<id>"
+      requestBody:
+        application/json: {"name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}], "passthrough": {"other_known_names": "John Doe"}}
+      responses:
+        "201":
+          application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
+  ats_get_background_check_package:
+    "":
+      parameters:
+        path:
+          id: "<id>"
+        query:
+          fields: "id,remote_id,name,description,tests"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": []}}
+  ats_list_background_check_request:
+    "":
+      parameters:
+        query:
+          fields: "id,remote_id,package,application,job,candidate,requester,results_update_url"
+          filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
+          updated_after: "2020-01-01T00:00:00.000Z"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application_status": {"value": "hired", "source_value": "Hired"}, "passthrough": {"other_known_names": "John Doe"}}, "job": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "title": "Software Engineer", "passthrough": {"other_known_names": "John Doe"}, "hiring_team": [{"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}]}, "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "first_name": "Romain", "last_name": "Sestier", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}, "profile_url": "https://exmaple.com/candidate?id=xyz"}, "requester": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}}, "results_update_url": "https://exmaple.com/integrations/results/update", "package": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}]}}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application_status": {"value": "hired", "source_value": "Hired"}, "passthrough": {"other_known_names": "John Doe"}}, "job": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "title": "Software Engineer", "passthrough": {"other_known_names": "John Doe"}, "hiring_team": [{"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}, {"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}]}, "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "first_name": "Romain", "last_name": "Sestier", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}, "profile_url": "https://exmaple.com/candidate?id=xyz"}, "requester": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}}, "results_update_url": "https://exmaple.com/integrations/results/update", "package": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}]}}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application_status": {"value": "hired", "source_value": "Hired"}, "passthrough": {"other_known_names": "John Doe"}}, "job": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "title": "Software Engineer", "passthrough": {"other_known_names": "John Doe"}, "hiring_team": [{"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}, {"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}]}, "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "first_name": "Romain", "last_name": "Sestier", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}, "profile_url": "https://exmaple.com/candidate?id=xyz"}, "requester": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}}, "results_update_url": "https://exmaple.com/integrations/results/update", "package": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}]}}]}
+  ats_get_background_check_request:
+    "":
+      parameters:
+        path:
+          id: "<id>"
+        query:
+          fields: "id,remote_id,package,application,job,candidate,requester,results_update_url"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "application_status": {"value": "hired", "source_value": "Hired"}, "passthrough": {"other_known_names": "John Doe"}}, "job": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "title": "Software Engineer", "passthrough": {"other_known_names": "John Doe"}, "hiring_team": [{"user_id": "123456", "first_name": "John", "last_name": "Doe", "email": "john.doe@gmail.com", "role": "Software Engineer"}]}, "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "first_name": "Romain", "last_name": "Sestier", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}, "profile_url": "https://exmaple.com/candidate?id=xyz"}, "requester": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "emails": [{"type": "personal", "value": "sestier.romain123@gmail.com"}, {"type": "personal", "value": "sestier.romain123@gmail.com"}], "passthrough": {"other_known_names": "John Doe"}}, "results_update_url": "https://exmaple.com/integrations/results/update", "package": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Standard Background Check", "description": "Standard background package for hires", "tests": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Test 1", "description": "Skills test to gauge a candidate's proficiency in job-specific skills"}]}}}
+  ats_get_background_check_result:
+    "":
+      parameters:
+        path:
+          id: "<id>"
+        query:
+          fields: "id,remote_id,candidate,score,start_date,submission_date,summary,result,result_url,attachments"
+        header:
+          x-account-id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "candidate": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "profile_url": "https://exmaple.com/candidate?id=xyz"}, "score": {"label": "Percentage", "value": "80", "min": "0", "max": "100"}, "start_date": "2021-01-01T01:01:01.000Z", "submission_date": "2021-01-01T01:01:01.000Z", "summary": "Test is passed", "result": {"value": "passed", "source_value": "Passed"}, "result_url": "https://exmaple.com/result?id=xyz", "attachments": [{"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}, {"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}, {"url": "http://example.com/resume.pdf", "content_type": {"value": "text", "source_value": "Text"}}]}
+generatedTests: {}
