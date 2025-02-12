@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
 management:
-  docChecksum: f8850c380fb58883ca99cc81f3cde99e
+  docChecksum: 6301be8d5b416d45d8ff5e60056eaff6
   docVersion: 1.0.0
-  speakeasyVersion: 1.484.1
-  generationVersion: 2.503.2
-  releaseVersion: 0.1.0
-  configChecksum: 7bdf3a4336053dd33ca2d2d9775190c9
+  speakeasyVersion: 1.488.0
+  generationVersion: 2.506.0
+  releaseVersion: 0.1.1
+  configChecksum: c4ddb6f98da23b406cf75fedbcdd2763
   repoURL: https://github.com/StackOneHQ/stackone-client-postman.git
 features:
   postman:
@@ -29,14 +29,14 @@ examples:
         application/json: {"categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "ats", "documents"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "expires_in": 1800, "multiple": false}
       responses:
         "201":
-          application/json: {"id": 6908.66, "organization_id": 6497.42, "project_id": "<id>", "categories": ["ats", "hris", "ats", "crm", "iam", "marketing", "lms", "ats", "documents"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-12-16T09:37:09.059Z", "token": "<value>", "auth_link_url": "https://unsung-reasoning.name/"}
+          application/json: {"id": 6908.66, "organization_id": 6497.42, "project_id": "<id>", "categories": ["ats", "hris", "lms", "crm", "iam", "marketing", "lms", "marketing", "documents"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-12-16T09:37:09.059Z", "token": "<value>", "auth_link_url": "https://unsung-reasoning.name/"}
   stackone_authenticate_connect_session:
     speakeasy-default-stackone-authenticate-connect-session:
       requestBody:
         application/json: {"token": "<value>"}
       responses:
         "201":
-          application/json: {"id": 3607.71, "organization_id": 2827.51, "project_id": "<id>", "categories": ["ats", "hris", "marketing", "crm", "iam", "marketing", "lms", "lms", "documents"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-04-16T14:12:57.983Z"}
+          application/json: {"id": 3607.71, "organization_id": 2827.51, "project_id": "<id>", "categories": ["ats", "hris", "crm", "crm", "iam", "marketing", "lms", "hris-legacy", "documents"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-04-16T14:12:57.983Z"}
   stackone_list_linked_accounts:
     speakeasy-default-stackone-list-linked-accounts:
       parameters:
@@ -166,7 +166,7 @@ examples:
       parameters:
         query:
           raw: false
-          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
+          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,company_id,remote_company_id,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           page_size: "25"
           updated_after: "2020-01-01T00:00:00.000Z"
@@ -194,7 +194,7 @@ examples:
           id: "<id>"
         query:
           raw: false
-          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
+          fields: "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,company_id,remote_company_id,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number"
           expand: "company,employments,work_location,home_location,groups"
           include: "avatar_url,avatar,custom_fields,job_description,benefits"
         header:
@@ -830,7 +830,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"passthrough": {"other_known_names": "John Doe"}, "custom_fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Training Completion Status", "value": "Completed", "value_id": "value_456", "remote_value_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}], "application_status": {"value": "hired", "source_value": "Hired"}, "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}, "interview_stage_id": "18bcbb1b-3cbc-4198-a999-460861d19480"}
+        application/json: {"passthrough": {"other_known_names": "John Doe"}, "custom_fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Training Completion Status", "value": "Completed", "value_id": "value_456", "remote_value_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}], "application_status": {"value": "hired", "source_value": "Hired"}, "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}}
       responses:
         "200":
           application/json: {"statusCode": 200, "message": "Record updated successfully.", "timestamp": "2021-01-01T01:01:01.000Z"}
@@ -903,7 +903,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "short_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "number", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "short_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "single_select", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "location", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "phone", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "boolean", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "long_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "email", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "score", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no_decision", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "long_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}]}
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "score", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "location", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "multi_select", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "short_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "location", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "short_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "single_select", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "short_text", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "location", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "boolean", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "location", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "strong_no", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}]}
   ats_get_application_scorecard:
     speakeasy-default-ats-get-application-scorecard:
       parameters:
@@ -917,7 +917,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "boolean", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "score", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "email", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "date", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "unmapped_value", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "sections": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "date", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "email", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "boolean", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}, {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Technical Skills", "fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "label": "Problem Solving", "type": "score", "values": ["Excellent", "Good", "Average", "Poor"], "required": true}]}], "label": "Technical Interview", "candidate_id": "5678-9", "remote_candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "application_id": "1011-12", "remote_application_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "interview_id": "1314-15", "remote_interview_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "author_id": "1617-18", "remote_author_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "overall_recommendation": "no_decision", "created_at": "2021-01-01T00:00.000Z", "updated_at": "2021-01-01T00:00.000Z"}}
   ats_list_application_notes:
     speakeasy-default-ats-list-application-notes:
       parameters:
@@ -2398,7 +2398,7 @@ examples:
       parameters:
         query:
           raw: false
-          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider"
+          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,mobile_launch_content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           page_size: "25"
           updated_after: "2020-01-01T00:00:00.000Z"
@@ -2424,7 +2424,7 @@ examples:
           id: "<id>"
         query:
           raw: false
-          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider"
+          fields: "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,mobile_launch_content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider"
         header:
           x-account-id: "<id>"
       responses:
@@ -2569,7 +2569,7 @@ examples:
           id: "<id>"
         query:
           raw: false
-          fields: "id,remote_id,name,active,level,language,hierarchy,competency"
+          fields: "id,remote_id,name,active,level,language,hierarchy,proficiency"
         header:
           x-account-id: "<id>"
       responses:
@@ -2580,7 +2580,7 @@ examples:
       parameters:
         query:
           raw: false
-          fields: "id,remote_id,name,active,level,language,hierarchy,competency"
+          fields: "id,remote_id,name,active,level,language,hierarchy,proficiency"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           page_size: "25"
           updated_after: "2020-01-01T00:00:00.000Z"
@@ -2639,5 +2639,17 @@ examples:
       responses:
         "201":
           application/json: {"statusCode": 200, "message": "Record updated successfully.", "timestamp": "2021-01-01T01:01:01.000Z"}
+  hris_create_employee_skill:
+    speakeasy-default-hris-create-employee-skill:
+      parameters:
+        path:
+          id: "<id>"
+        header:
+          x-account-id: "<id>"
+      requestBody:
+        application/json: {"id": "16873-IT345", "name": "Information-Technology"}
+      responses:
+        "201":
+          application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
 examplesVersion: 1.0.0
 generatedTests: {}
