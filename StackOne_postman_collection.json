@@ -283,6 +283,158 @@
             ]
         },
         {
+            "name": "Request Logs",
+            "item": [
+                {
+                    "name": "List Step Logs",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/requests/logs/steps",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "requests",
+                                "logs",
+                                "steps"
+                            ],
+                            "query": [
+                                {
+                                    "key": "order_by",
+                                    "value": "eventDatetime",
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "order_direction",
+                                    "value": "desc",
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "5448.83",
+                                    "type": "number"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get a Log",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/requests/logs/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "requests",
+                                "logs",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "include",
+                                    "value": "step_logs",
+                                    "type": "enum"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Logs",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/requests/logs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "requests",
+                                "logs"
+                            ],
+                            "query": [
+                                {
+                                    "key": "order_by",
+                                    "value": "eventDatetime",
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "order_direction",
+                                    "value": "asc",
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "8917.73",
+                                    "type": "number"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "include",
+                                    "value": "step_logs",
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
             "name": "Connectors",
             "item": [
                 {
@@ -377,7 +529,7 @@
                             },
                             {
                                 "key": "Accept",
-                                "value": "",
+                                "value": "application/json",
                                 "type": "string"
                             }
                         ],
@@ -432,9 +584,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -459,9 +609,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -509,9 +657,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -566,9 +712,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -593,9 +737,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -644,9 +786,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -671,9 +811,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -727,9 +865,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -739,7 +875,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,company_id,remote_company_id,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,benefits,employee_number,national_identity_number,national_identity_numbers,skills",
                                     "type": "string"
                                 },
                                 {
@@ -754,9 +890,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -771,7 +905,7 @@
                                 },
                                 {
                                     "key": "expand",
-                                    "value": "company,employments,work_location,home_location,groups",
+                                    "value": "company,employments,work_location,home_location,groups,skills",
                                     "type": "string"
                                 },
                                 {
@@ -853,9 +987,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -865,12 +997,12 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,benefits,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,employee_number,national_identity_number",
+                                    "value": "id,remote_id,first_name,last_name,name,display_name,gender,ethnicity,date_of_birth,birthday,marital_status,avatar_url,avatar,personal_email,personal_phone_number,work_email,work_phone_number,job_id,remote_job_id,job_title,job_description,department_id,remote_department_id,department,cost_centers,company,manager_id,remote_manager_id,hire_date,start_date,tenure,work_anniversary,employment_type,employment_contract_type,employment_status,termination_date,company_name,company_id,remote_company_id,preferred_language,citizenships,home_location,work_location,employments,custom_fields,documents,created_at,updated_at,benefits,employee_number,national_identity_number,national_identity_numbers,skills",
                                     "type": "string"
                                 },
                                 {
                                     "key": "expand",
-                                    "value": "company,employments,work_location,home_location,groups",
+                                    "value": "company,employments,work_location,home_location,groups,skills",
                                     "type": "string"
                                 },
                                 {
@@ -938,6 +1070,54 @@
                     }
                 },
                 {
+                    "name": "Invite Employee",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/invite",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "invite"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
                     "name": "List Employee Time Off Requests",
                     "request": {
                         "method": "GET",
@@ -968,9 +1148,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -980,7 +1158,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy",
                                     "type": "string"
                                 },
                                 {
@@ -995,9 +1173,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -1008,6 +1184,11 @@
                                 {
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "policy",
                                     "type": "string"
                                 }
                             ],
@@ -1102,9 +1283,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -1114,9 +1293,113 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "policy",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Cancel Employee Time Off Request",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/time_off/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "time_off",
+                                ":subResourceId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Employee Time Off Request",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/time_off/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "time_off",
+                                ":subResourceId"
                             ],
                             "variable": [
                                 {
@@ -1245,7 +1528,7 @@
                             },
                             {
                                 "key": "Accept",
-                                "value": "application/octet-stream",
+                                "value": "application/octet-stream,application/json",
                                 "type": "string"
                             }
                         ],
@@ -1267,6 +1550,11 @@
                                 {
                                     "key": "format",
                                     "value": "base64",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "export_format",
+                                    "value": "text/plain",
                                     "type": "string"
                                 }
                             ],
@@ -1317,9 +1605,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -1344,9 +1630,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -1403,9 +1687,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1465,9 +1747,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1492,9 +1772,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -1543,9 +1821,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1601,9 +1877,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1628,9 +1902,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -1735,9 +2007,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1784,7 +2054,7 @@
                             },
                             {
                                 "key": "Accept",
-                                "value": "",
+                                "value": "application/json",
                                 "type": "string"
                             }
                         ],
@@ -1804,6 +2074,159 @@
                                 ":id",
                                 "work_eligibility",
                                 ":subResourceId"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Employee Time Off Balances",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/time_off_balances",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "time_off_balances"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,policy_id,remote_policy_id,policy,current_balance,initial_balance,balance_unit,balance_start_date,balance_expiry_date,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "policy",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Employee Time Off Balance",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/time_off_balances/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "time_off_balances",
+                                ":subResourceId"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": false,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,policy_id,remote_policy_id,policy,current_balance,initial_balance,balance_unit,balance_start_date,balance_expiry_date,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "policy",
+                                    "type": "string"
+                                }
                             ],
                             "variable": [
                                 {
@@ -1850,9 +2273,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -1862,7 +2283,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at,start_date,end_date,active,department,team,cost_center,division,job,type,contract_type,manager",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,end_date,employment_type,employment_contract_type,change_reason,grade,work_time,payroll_code,fte,created_at,updated_at,start_date,active,department,team,cost_center,cost_centers,division,job,type,contract_type,manager",
                                     "type": "string"
                                 },
                                 {
@@ -1877,9 +2298,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -1932,9 +2351,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -1944,7 +2361,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at,start_date,end_date,active,department,team,cost_center,division,job,type,contract_type,manager",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,end_date,employment_type,employment_contract_type,change_reason,grade,work_time,payroll_code,fte,created_at,updated_at,start_date,active,department,team,cost_center,cost_centers,division,job,type,contract_type,manager",
                                     "type": "string"
                                 },
                                 {
@@ -1995,9 +2412,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -2007,7 +2422,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at,start_date,end_date,active,department,team,cost_center,division,job,type,contract_type,manager",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,end_date,employment_type,employment_contract_type,change_reason,grade,work_time,payroll_code,fte,created_at,updated_at,start_date,active,department,team,cost_center,cost_centers,division,job,type,contract_type,manager",
                                     "type": "string"
                                 },
                                 {
@@ -2022,9 +2437,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2134,9 +2547,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2146,7 +2557,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,employment_type,employment_contract_type,time_worked,created_at,updated_at,start_date,end_date,active,department,team,cost_center,division,job,type,contract_type,manager",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,job_title,pay_rate,pay_period,pay_frequency,pay_currency,effective_date,end_date,employment_type,employment_contract_type,change_reason,grade,work_time,payroll_code,fte,created_at,updated_at,start_date,active,department,team,cost_center,cost_centers,division,job,type,contract_type,manager",
                                     "type": "string"
                                 },
                                 {
@@ -2226,7 +2637,7 @@
                     }
                 },
                 {
-                    "name": "List locations",
+                    "name": "List Work Locations",
                     "request": {
                         "method": "GET",
                         "header": [
@@ -2254,9 +2665,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2281,9 +2690,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2302,7 +2709,7 @@
                     }
                 },
                 {
-                    "name": "Get Location",
+                    "name": "Get Work Location",
                     "request": {
                         "method": "GET",
                         "header": [
@@ -2331,9 +2738,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -2387,9 +2792,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -2399,7 +2802,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy",
                                     "type": "string"
                                 },
                                 {
@@ -2414,9 +2817,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2428,46 +2829,12 @@
                                     "key": "updated_after",
                                     "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "policy",
+                                    "type": "string"
                                 }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "Creates a time off request",
-                    "request": {
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{}"
-                        },
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/hris/time_off",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "hris",
-                                "time_off"
                             ]
                         },
                         "description": ""
@@ -2503,9 +2870,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2515,56 +2880,14 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,duration,created_at,updated_at",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy",
                                     "type": "string"
-                                }
-                            ],
-                            "variable": [
+                                },
                                 {
-                                    "key": "id",
-                                    "value": "<value>",
+                                    "key": "expand",
+                                    "value": "policy",
                                     "type": "string"
                                 }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "Update time off request",
-                    "request": {
-                        "method": "PATCH",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Content-Type",
-                                "value": "application/json",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{}"
-                        },
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/hris/time_off/{id}",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "hris",
-                                "time_off",
-                                ":id"
                             ],
                             "variable": [
                                 {
@@ -2606,9 +2929,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -2633,9 +2954,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2683,9 +3002,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2739,9 +3056,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -2766,9 +3081,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2816,9 +3129,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2872,9 +3183,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -2899,9 +3208,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -2949,9 +3256,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3005,9 +3310,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3017,7 +3320,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
                                     "type": "string"
                                 },
                                 {
@@ -3032,9 +3335,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -3082,9 +3383,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3109,9 +3408,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -3159,9 +3456,80 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,type,distribution_percentage,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Team Groups",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/groups/teams",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "groups",
+                                "teams"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3186,9 +3554,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -3236,9 +3602,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3248,7 +3612,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
                                     "type": "string"
                                 }
                             ],
@@ -3294,9 +3658,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3352,9 +3714,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3364,7 +3724,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "value": "id,remote_id,name,type,distribution_percentage,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
                                     "type": "string"
                                 }
                             ],
@@ -3372,83 +3732,6 @@
                                 {
                                     "key": "id",
                                     "value": "<value>",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "List Team Groups",
-                    "request": {
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/hris/groups/teams",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "hris",
-                                "groups",
-                                "teams"
-                            ],
-                            "query": [
-                                {
-                                    "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
-                                    "type": "boolean"
-                                },
-                                {
-                                    "key": "proxy",
-                                    "value": {},
-                                    "type": "map"
-                                },
-                                {
-                                    "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter",
-                                    "value": {},
-                                    "type": "class"
-                                },
-                                {
-                                    "key": "page",
-                                    "value": "<value>",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "next",
-                                    "value": "<value>",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
                                     "type": "string"
                                 }
                             ]
@@ -3487,9 +3770,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3543,9 +3824,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3555,7 +3834,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
                                     "type": "string"
                                 },
                                 {
@@ -3570,9 +3849,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -3620,9 +3897,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3632,13 +3907,565 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids",
+                                    "value": "id,remote_id,name,type,parent_ids,remote_parent_ids,owner_ids,remote_owner_ids,company_id,remote_company_id",
                                     "type": "string"
                                 }
                             ],
                             "variable": [
                                 {
                                     "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Employee Skills",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/skills",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "skills"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active,language,maximum_proficiency,minimum_proficiency",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create Employee Skill",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/skills",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "skills"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Employee Skill",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/skills/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "skills",
+                                ":subResourceId"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,active,language,maximum_proficiency,minimum_proficiency",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Time Off Policies",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/time_off_policies",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "time_off_policies"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": false,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,duration_unit,reasons,updated_at,created_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Time Off Policy",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/time_off_policies/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "time_off_policies",
+                                ":id"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,duration_unit,reasons,updated_at,created_at",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Assigned Time Off Policies",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/time_off_policies",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "time_off_policies"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": false,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,name,description,type,duration_unit,reasons,updated_at,created_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List Employee Tasks",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/tasks",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "tasks"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,name,description,type,status,due_date,completion_date,assigned_by_employee_id,remote_assigned_by_employee_id,assigned_by_employee_name,link_to_task,extracted_links,next_task_id,remote_next_task_id,parent_process_name,comments,attachments,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": {},
+                                    "type": "class"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "page_size",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "next",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "updated_after",
+                                    "value": "2020-01-01T00:00:00.000Z",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "attachments",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get Employee Task",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/hris/employees/{id}/tasks/{subResourceId}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "hris",
+                                "employees",
+                                ":id",
+                                "tasks",
+                                ":subResourceId"
+                            ],
+                            "query": [
+                                {
+                                    "key": "raw",
+                                    "value": true,
+                                    "type": "boolean"
+                                },
+                                {
+                                    "key": "proxy",
+                                    "value": {},
+                                    "type": "map"
+                                },
+                                {
+                                    "key": "fields",
+                                    "value": "id,remote_id,employee_id,remote_employee_id,name,description,type,status,due_date,completion_date,assigned_by_employee_id,remote_assigned_by_employee_id,assigned_by_employee_name,link_to_task,extracted_links,next_task_id,remote_next_task_id,parent_process_name,comments,attachments,created_at,updated_at",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "expand",
+                                    "value": "attachments",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "subResourceId",
                                     "value": "<value>",
                                     "type": "string"
                                 }
@@ -3681,9 +4508,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3708,9 +4533,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -3817,9 +4640,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -3932,9 +4753,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -3959,9 +4778,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -4119,9 +4936,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4182,9 +4997,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4209,9 +5022,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -4273,9 +5084,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4336,9 +5145,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4363,9 +5170,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -4475,9 +5280,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -4592,9 +5395,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4619,9 +5420,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -4683,9 +5482,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4776,7 +5573,7 @@
                             },
                             {
                                 "key": "Accept",
-                                "value": "application/octet-stream",
+                                "value": "application/octet-stream,application/json",
                                 "type": "string"
                             }
                         ],
@@ -4798,6 +5595,11 @@
                                 {
                                     "key": "format",
                                     "value": "base64",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "export_format",
+                                    "value": "text/plain",
                                     "type": "string"
                                 }
                             ],
@@ -4848,9 +5650,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -4875,9 +5675,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -4939,9 +5737,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5000,9 +5796,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5027,9 +5821,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5126,9 +5918,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5236,9 +6026,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5263,9 +6051,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5375,9 +6161,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5437,9 +6221,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5464,9 +6246,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5515,9 +6295,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5542,9 +6320,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5599,9 +6375,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5626,9 +6400,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5677,9 +6449,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -5704,9 +6474,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5761,9 +6529,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5788,9 +6554,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5839,9 +6603,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5866,9 +6628,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -5922,9 +6682,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -5949,9 +6707,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6004,9 +6760,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6060,9 +6814,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6087,9 +6839,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6142,9 +6892,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6198,9 +6946,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6225,9 +6971,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6280,9 +7024,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6336,9 +7078,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -6348,7 +7088,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,description,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -6363,9 +7103,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6467,9 +7205,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -6479,7 +7215,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,code,title,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
+                                    "value": "id,remote_id,code,title,description,status,job_status,department_ids,remote_department_ids,location_ids,remote_location_ids,hiring_team,interview_stages,confidential,custom_fields,created_at,updated_at",
                                     "type": "string"
                                 },
                                 {
@@ -6580,9 +7316,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6607,9 +7341,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6657,9 +7389,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -6713,9 +7443,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6740,9 +7468,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6795,9 +7521,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -6851,9 +7575,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -6878,9 +7600,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -6933,9 +7653,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -6989,9 +7707,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7001,7 +7717,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,email",
+                                    "value": "id,remote_id,first_name,last_name,name,email,phone",
                                     "type": "string"
                                 },
                                 {
@@ -7016,9 +7732,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -7071,9 +7785,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7083,7 +7795,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,first_name,last_name,name,email",
+                                    "value": "id,remote_id,first_name,last_name,name,email,phone",
                                     "type": "string"
                                 }
                             ],
@@ -7127,9 +7839,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7139,7 +7849,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
+                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,start_date,updated_at,created_at",
                                     "type": "string"
                                 },
                                 {
@@ -7154,9 +7864,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -7214,9 +7922,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7226,7 +7932,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,updated_at,created_at",
+                                    "value": "id,remote_id,title,locations,internal,status,job_id,remote_job_id,content,compensation,employment_type,employment_contract_type,external_url,external_apply_url,questionnaires,start_date,updated_at,created_at",
                                     "type": "string"
                                 },
                                 {
@@ -7275,9 +7981,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7302,9 +8006,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -7396,9 +8098,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7453,9 +8153,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7480,9 +8178,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -7531,9 +8227,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7629,9 +8323,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7737,9 +8429,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7794,9 +8484,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -7821,9 +8509,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -7912,9 +8598,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7927,6 +8611,93 @@
                                     "value": "id,remote_id,name,description,tests",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete Background Check Package",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/background_checks/packages/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "background_checks",
+                                "packages",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Background Check Package",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/ats/background_checks/packages/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "ats",
+                                "background_checks",
+                                "packages",
+                                ":id"
                             ],
                             "variable": [
                                 {
@@ -7969,9 +8740,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -7996,9 +8765,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8087,9 +8854,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8195,9 +8960,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8256,9 +9019,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8283,9 +9044,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8377,9 +9136,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8485,9 +9242,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8512,9 +9267,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8562,9 +9315,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8618,9 +9369,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8645,9 +9394,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8695,9 +9442,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8752,9 +9497,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8779,9 +9522,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8830,9 +9571,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8857,9 +9596,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -8918,9 +9655,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8945,9 +9680,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9000,9 +9733,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -9020,6 +9751,91 @@
                                     "value": "roles,groups",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/iam/users/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "iam",
+                                "users",
+                                ":id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/iam/users/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "iam",
+                                "users",
+                                ":id"
                             ],
                             "variable": [
                                 {
@@ -9061,9 +9877,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9088,9 +9902,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9143,9 +9955,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9204,9 +10014,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9231,9 +10039,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9286,9 +10092,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9347,9 +10151,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9374,9 +10176,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9429,9 +10229,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9496,9 +10294,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9523,9 +10319,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9614,9 +10408,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9719,9 +10511,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -9746,9 +10536,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -9837,9 +10625,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9942,9 +10728,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -9969,9 +10753,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -10060,9 +10842,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10165,9 +10945,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -10192,9 +10970,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -10283,9 +11059,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10388,9 +11162,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -10415,9 +11187,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -10506,9 +11276,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10610,9 +11378,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10637,9 +11403,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -10687,9 +11451,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10743,9 +11505,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -10770,9 +11530,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -10859,9 +11617,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11007,9 +11763,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11019,7 +11773,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content,provider",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content,provider,localizations",
                                     "type": "string"
                                 },
                                 {
@@ -11034,9 +11788,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -11123,9 +11875,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11135,7 +11885,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content,provider",
+                                    "value": "id,remote_id,external_reference,content_ids,remote_content_ids,title,description,languages,cover_url,url,active,duration,categories,skills,updated_at,created_at,content,provider,localizations",
                                     "type": "string"
                                 }
                             ],
@@ -11181,9 +11931,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11208,9 +11956,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -11325,9 +12071,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11426,9 +12170,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11438,7 +12180,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider",
+                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,mobile_launch_content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider,localizations,tags",
                                     "type": "string"
                                 },
                                 {
@@ -11453,9 +12195,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -11542,9 +12282,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11554,9 +12292,56 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider",
+                                    "value": "id,remote_id,external_reference,course_ids,remote_course_ids,title,description,additional_data,languages,content_url,mobile_launch_content_url,content_type,cover_url,active,duration,order,categories,skills,updated_at,created_at,provider,localizations,tags",
                                     "type": "string"
                                 }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Update Content",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "x-account-id",
+                                "value": "<value>",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/unified/lms/content/{id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "unified",
+                                "lms",
+                                "content",
+                                ":id"
                             ],
                             "variable": [
                                 {
@@ -11600,9 +12385,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11627,9 +12410,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -11734,9 +12515,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11840,9 +12619,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11867,9 +12644,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -11917,9 +12692,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11974,9 +12747,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12030,9 +12801,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12057,9 +12826,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -12106,9 +12873,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12133,9 +12898,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -12183,9 +12946,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12240,9 +13001,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12252,7 +13011,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,active,level,language,hierarchy,competency",
+                                    "value": "id,remote_id,name,active,hierarchy,language",
                                     "type": "string"
                                 }
                             ],
@@ -12296,9 +13055,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12308,7 +13065,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,name,active,level,language,hierarchy,competency",
+                                    "value": "id,remote_id,name,active,hierarchy,language",
                                     "type": "string"
                                 },
                                 {
@@ -12323,9 +13080,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -12372,9 +13127,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12399,9 +13152,7 @@
                                 },
                                 {
                                     "key": "page_size",
-                                    "value": {
-                                        "Value": "25"
-                                    },
+                                    "value": "<value>",
                                     "type": "string"
                                 },
                                 {
@@ -12459,9 +13210,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": {
-                                        "Value": false
-                                    },
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
