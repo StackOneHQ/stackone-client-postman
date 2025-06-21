@@ -8293,62 +8293,6 @@
                     }
                 },
                 {
-                    "name": "Get Assessments Requests",
-                    "request": {
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/ats/assessments/orders/{id}",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "ats",
-                                "assessments",
-                                "orders",
-                                ":id"
-                            ],
-                            "query": [
-                                {
-                                    "key": "raw",
-                                    "value": true,
-                                    "type": "boolean"
-                                },
-                                {
-                                    "key": "proxy",
-                                    "value": {},
-                                    "type": "map"
-                                },
-                                {
-                                    "key": "fields",
-                                    "value": "id,remote_id,package,application,job,candidate,requester,results_update_url",
-                                    "type": "string"
-                                }
-                            ],
-                            "variable": [
-                                {
-                                    "key": "id",
-                                    "value": "<value>",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
                     "name": "Update Assessments Result",
                     "request": {
                         "method": "PATCH",
@@ -8429,7 +8373,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8484,7 +8428,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -8598,7 +8542,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -8711,79 +8655,6 @@
                     }
                 },
                 {
-                    "name": "List Background Check Request",
-                    "request": {
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/ats/background_checks/orders",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "ats",
-                                "background_checks",
-                                "orders"
-                            ],
-                            "query": [
-                                {
-                                    "key": "raw",
-                                    "value": false,
-                                    "type": "boolean"
-                                },
-                                {
-                                    "key": "proxy",
-                                    "value": {},
-                                    "type": "map"
-                                },
-                                {
-                                    "key": "fields",
-                                    "value": "id,remote_id,package,application,job,candidate,requester,results_update_url",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "filter",
-                                    "value": {},
-                                    "type": "class"
-                                },
-                                {
-                                    "key": "page",
-                                    "value": "<value>",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "page_size",
-                                    "value": "<value>",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "next",
-                                    "value": "<value>",
-                                    "type": "string"
-                                },
-                                {
-                                    "key": "updated_after",
-                                    "value": "2020-01-01T00:00:00.000Z",
-                                    "type": "string"
-                                }
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
                     "name": "Order Background Check Request",
                     "request": {
                         "method": "POST",
@@ -8818,62 +8689,6 @@
                                 "ats",
                                 "background_checks",
                                 "orders"
-                            ]
-                        },
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "Get Background Check Request",
-                    "request": {
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "x-account-id",
-                                "value": "<value>",
-                                "type": "string"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application/json",
-                                "type": "string"
-                            }
-                        ],
-                        "url": {
-                            "raw": "{{baseUrl}}/unified/ats/background_checks/orders/{id}",
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "path": [
-                                "unified",
-                                "ats",
-                                "background_checks",
-                                "orders",
-                                ":id"
-                            ],
-                            "query": [
-                                {
-                                    "key": "raw",
-                                    "value": true,
-                                    "type": "boolean"
-                                },
-                                {
-                                    "key": "proxy",
-                                    "value": {},
-                                    "type": "map"
-                                },
-                                {
-                                    "key": "fields",
-                                    "value": "id,remote_id,package,application,job,candidate,requester,results_update_url",
-                                    "type": "string"
-                                }
-                            ],
-                            "variable": [
-                                {
-                                    "key": "id",
-                                    "value": "<value>",
-                                    "type": "string"
-                                }
                             ]
                         },
                         "description": ""
@@ -9136,7 +8951,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -9242,7 +9057,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9369,7 +9184,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9442,7 +9257,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -9733,7 +9548,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -9877,7 +9692,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10014,7 +9829,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -10511,7 +10326,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -10728,7 +10543,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11162,7 +10977,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11276,7 +11091,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11451,7 +11266,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -11505,7 +11320,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11617,7 +11432,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -11763,7 +11578,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12071,7 +11886,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12282,7 +12097,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12395,7 +12210,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference,time_spent",
                                     "type": "string"
                                 },
                                 {
@@ -12619,7 +12434,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12629,7 +12444,7 @@
                                 },
                                 {
                                     "key": "fields",
-                                    "value": "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference",
+                                    "value": "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference,time_spent",
                                     "type": "string"
                                 },
                                 {
@@ -12692,7 +12507,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -12747,7 +12562,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -12946,7 +12761,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
@@ -13001,7 +12816,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -13127,7 +12942,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": true,
+                                    "value": false,
                                     "type": "boolean"
                                 },
                                 {
@@ -13210,7 +13025,7 @@
                             "query": [
                                 {
                                     "key": "raw",
-                                    "value": false,
+                                    "value": true,
                                     "type": "boolean"
                                 },
                                 {
