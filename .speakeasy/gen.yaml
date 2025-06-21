@@ -17,7 +17,7 @@ generation:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
 postman:
-  version: 0.2.0
+  version: 0.2.1
   baseErrorName: StackOneError
   defaultErrorName: StackOneDefaultError
   imports:

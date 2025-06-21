@@ -1,4 +1,4 @@
-speakeasyVersion: 1.561.0
+speakeasyVersion: 1.568.0
 sources:
     hris:
         sourceNamespace: hris
@@ -8,18 +8,18 @@ sources:
             - latest
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:d63c250a9e3a1e4eab1fc48573dd284c9a0e4d5b84843d444fa9891adbe88d11
-        sourceBlobDigest: sha256:7dab4657be47ad2334caea43b0cd9f9c72b23524e349551cfa054da465c6fd9c
+        sourceRevisionDigest: sha256:4a20f0b56c48dd49cb7f008db4605e327b6c83eb79acc093beb446699e4dce04
+        sourceBlobDigest: sha256:a769fd8e5136fb6e37c282b4584fa3ae18b5aa0de457a697f1243683934d587a
         tags:
             - latest
-            - speakeasy-sdk-regen-1739578432
+            - speakeasy-sdk-regen-1750119385
             - 1.0.0
 targets:
     my-first-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:d63c250a9e3a1e4eab1fc48573dd284c9a0e4d5b84843d444fa9891adbe88d11
-        sourceBlobDigest: sha256:7dab4657be47ad2334caea43b0cd9f9c72b23524e349551cfa054da465c6fd9c
+        sourceRevisionDigest: sha256:4a20f0b56c48dd49cb7f008db4605e327b6c83eb79acc093beb446699e4dce04
+        sourceBlobDigest: sha256:a769fd8e5136fb6e37c282b4584fa3ae18b5aa0de457a697f1243683934d587a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
