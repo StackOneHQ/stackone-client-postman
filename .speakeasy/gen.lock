@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 3a450d25-b36a-4ee1-a439-d28897ecbc3f
 management:
-  docChecksum: 064df56be1bf02b1f3b17a8ea1ba52df
+  docChecksum: 548e51635169aa70e381f636e3df6a93
   docVersion: 1.0.0
-  speakeasyVersion: 1.561.0
-  generationVersion: 2.628.0
-  releaseVersion: 0.2.0
-  configChecksum: 7a7cb0341e724578a2a55602f5333038
+  speakeasyVersion: 1.571.2
+  generationVersion: 2.640.2
+  releaseVersion: 0.2.1
+  configChecksum: 5384d1f18eebe6222e1fc3ebac6f3077
   repoURL: https://github.com/StackOneHQ/stackone-client-postman.git
 features:
   postman:
@@ -27,10 +27,10 @@ examples:
   stackone_create_connect_session:
     speakeasy-default-stackone-create-connect-session:
       requestBody:
-        application/json: {"categories": ["ats", "hris", "documents", "crm", "iam", "marketing", "lms", "iam", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "expires_in": 1800, "multiple": false}
+        application/json: {"categories": ["ats", "hris", "documents", "crm", "iam", "marketing", "lms", "iam", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "expires_in": 1800, "multiple": false, "type": "test"}
       responses:
         "201":
-          application/json: {"id": 480.39, "organization_id": 203.83, "project_id": "<id>", "categories": ["ats", "hris", "messaging", "crm", "iam", "marketing", "lms", "hris-legacy", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2023-11-10T21:31:46.697Z", "external_trigger_token": "f0bc3d88-2178-5423-8c81-b81d6c9da824", "token": "<value>", "auth_link_url": "https://medium-story.biz/"}
+          application/json: {"id": 480.39, "organization_id": 203.83, "project_id": "<id>", "categories": ["ats", "hris", "messaging", "crm", "iam", "marketing", "lms", "hris-legacy", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2023-11-10T21:31:46.697Z", "external_trigger_token": "f0bc3d88-2178-5423-8c81-b81d6c9da824", "type": "test", "token": "<value>", "auth_link_url": "https://medium-story.biz/"}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": null, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -59,7 +59,7 @@ examples:
         application/json: {"token": "<value>"}
       responses:
         "201":
-          application/json: {"id": 8422.01, "organization_id": 9188.03, "project_id": "<id>", "categories": ["ats", "hris", "messaging", "crm", "iam", "marketing", "lms", "lms", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2024-10-01T04:59:29.242Z", "external_trigger_token": "f0bc3d88-2178-5423-8c81-b81d6c9da824"}
+          application/json: {"id": 8422.01, "organization_id": 9188.03, "project_id": "<id>", "categories": ["ats", "hris", "messaging", "crm", "iam", "marketing", "lms", "lms", "documents", "ticketing", "screening", "messaging"], "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2024-10-01T04:59:29.242Z", "external_trigger_token": "f0bc3d88-2178-5423-8c81-b81d6c9da824", "type": "unmapped_value"}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -119,7 +119,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-10-31T21:03:50.339Z", "updated_at": "2024-08-19T21:52:53.834Z"}
+          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-10-31T21:03:50.339Z", "updated_at": "2024-08-19T21:52:53.834Z", "type": "unmapped_value"}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -149,7 +149,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-02-08T13:24:15.952Z", "updated_at": "2023-10-15T07:09:50.321Z"}
+          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-02-08T13:24:15.952Z", "updated_at": "2023-10-15T07:09:50.321Z", "type": "unmapped_value"}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -178,10 +178,10 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"type": "test"}
       responses:
         "200":
-          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-04-07T14:23:42.615Z", "updated_at": "2025-10-09T05:20:37.883Z"}
+          application/json: {"id": "<id>", "provider": "<value>", "status": "error", "origin_owner_id": "<id>", "origin_owner_name": "<value>", "created_at": "2025-04-07T14:23:42.615Z", "updated_at": "2025-10-09T05:20:37.883Z", "type": "unmapped_value"}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -543,7 +543,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_1", "value": "Not Started"}, {"id": "option_2", "value": "In Progress"}, {"id": "option_3", "value": "Completed"}]}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -755,7 +755,7 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy"
+          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,comment,duration,created_at,updated_at,policy"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
           expand: "policy"
         header:
@@ -795,7 +795,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"approver_id": "1687-4", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "time_off_policy_id": "cx280928933", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"approver_id": "1687-4", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "time_off_policy_id": "cx280928933", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "comment": "Taking a day off for personal reasons", "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -830,13 +830,13 @@ examples:
           id: "<id>"
           subResourceId: "<id>"
         query:
-          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy"
+          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,comment,duration,created_at,updated_at,policy"
           expand: "policy"
         header:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "approver_id": "1687-4", "remote_approver_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "duration": "P3Y6M4DT12H30M5S", "time_off_policy_id": "cx280928933", "remote_time_off_policy_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "created_date": "2021-01-01T01:01:01.000Z", "updated_date": "2021-01-01T01:01:01.000Z", "policy": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Holidays", "description": "Usable for regional and national holidays of employees.", "type": {"value": "holiday"}, "duration_unit": {"value": "hours"}, "reasons": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}], "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "approver_id": "1687-4", "remote_approver_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "duration": "P3Y6M4DT12H30M5S", "time_off_policy_id": "cx280928933", "remote_time_off_policy_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "created_date": "2021-01-01T01:01:01.000Z", "updated_date": "2021-01-01T01:01:01.000Z", "policy": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Holidays", "description": "Usable for regional and national holidays of employees.", "type": {"value": "holiday"}, "duration_unit": {"value": "hours"}, "reasons": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}], "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}, "comment": "Taking a day off for personal reasons"}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": null, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -905,7 +905,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"approver_id": "1687-4", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "time_off_policy_id": "cx280928933", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "passthrough": {"other_known_names": "John Doe"}}
+        application/json: {"approver_id": "1687-4", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "time_off_policy_id": "cx280928933", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "comment": "Taking a day off for personal reasons", "passthrough": {"other_known_names": "John Doe"}}
       responses:
         "200":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -1706,7 +1706,7 @@ examples:
     speakeasy-default-hris-list-time-off-requests:
       parameters:
         query:
-          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy"
+          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,comment,duration,created_at,updated_at,policy"
           filter: null
           expand: "policy"
         header:
@@ -1744,13 +1744,13 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,duration,created_at,updated_at,policy"
+          fields: "id,remote_id,employee_id,remote_employee_id,approver_id,remote_approver_id,status,type,start_date,end_date,start_half_day,end_half_day,time_off_policy_id,remote_time_off_policy_id,reason,comment,duration,created_at,updated_at,policy"
           expand: "policy"
         header:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "approver_id": "1687-4", "remote_approver_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "duration": "P3Y6M4DT12H30M5S", "time_off_policy_id": "cx280928933", "remote_time_off_policy_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "created_date": "2021-01-01T01:01:01.000Z", "updated_date": "2021-01-01T01:01:01.000Z", "policy": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Holidays", "description": "Usable for regional and national holidays of employees.", "type": {"value": "holiday"}, "duration_unit": {"value": "hours"}, "reasons": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}], "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "employee_id": "1687-3", "remote_employee_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "approver_id": "1687-4", "remote_approver_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "start_date": "2021-01-01T01:01:01.000", "end_date": "2021-01-01T01:01:01.000", "start_half_day": true, "end_half_day": true, "duration": "P3Y6M4DT12H30M5S", "time_off_policy_id": "cx280928933", "remote_time_off_policy_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "reason": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}, "created_date": "2021-01-01T01:01:01.000Z", "updated_date": "2021-01-01T01:01:01.000Z", "policy": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Holidays", "description": "Usable for regional and national holidays of employees.", "type": {"value": "holiday"}, "duration_unit": {"value": "hours"}, "reasons": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}], "created_at": "2021-01-01T01:01:01.000Z", "updated_at": "2021-01-01T01:01:01.000Z"}, "comment": "Taking a day off for personal reasons"}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -2680,7 +2680,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"passthrough": {"other_known_names": "John Doe"}, "job_id": "4071538b-3cac-4fbf-ac76-f78ed250ffdd", "job_posting_id": "1c702a20-8de8-4d03-ac18-cbf4ac42eb51", "location_id": "dd8d41d1-5eb8-4408-9c87-9ba44604eae4", "application_status": null, "questionnaires": [{"id": "right_to_work", "answers": [{"id": "answer1", "type": {"value": "short_text", "source_value": "Short Text"}, "values": ["Yes"]}]}], "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}, "candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "candidate": {"passthrough": {"other_known_names": "John Doe"}, "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "phone_numbers": [{"phone": "+447700112233"}], "name": "Romain Sestier", "first_name": "Romain", "last_name": "Sestier", "email": "sestier.romain123@gmail.com", "social_links": [{"type": "linkedin", "url": "https://www.linkedin.com/in/romainsestier/"}], "company": "Company Inc.", "title": "Software Engineer", "hired_at": "2021-01-01T01:01:01.000Z", "country": "United States", "custom_fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Training Completion Status", "value": "Completed", "value_id": "value_456", "remote_value_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}]}}
+        application/json: {"passthrough": {"other_known_names": "John Doe"}, "job_id": "4071538b-3cac-4fbf-ac76-f78ed250ffdd", "job_posting_id": "1c702a20-8de8-4d03-ac18-cbf4ac42eb51", "location_id": "dd8d41d1-5eb8-4408-9c87-9ba44604eae4", "application_status": null, "questionnaires": [{"id": "right_to_work", "answers": [{"id": "answer1", "type": {"value": "short_text", "source_value": "Short Text"}, "values": ["Yes"]}]}], "source": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "LinkedIn"}, "candidate_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "candidate": {"passthrough": {"other_known_names": "John Doe"}, "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "phone_numbers": [{"phone": "+447700112233"}], "name": "Romain Sestier", "first_name": "Romain", "last_name": "Sestier", "email": "sestier.romain123@gmail.com", "social_links": [{"type": "linkedin", "url": "https://www.linkedin.com/in/romainsestier/"}], "company": "Company Inc.", "title": "Software Engineer", "hired_at": "2021-01-01T01:01:01.000Z", "country": "United States", "custom_fields": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "name": "Training Completion Status", "value": "Completed", "value_id": "value_456", "remote_value_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}]}, "documents": null}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -3671,7 +3671,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_1", "value": "Not Started"}, {"id": "option_2", "value": "In Progress"}, {"id": "option_3", "value": "Completed"}]}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -3743,7 +3743,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_1", "value": "Not Started"}, {"id": "option_2", "value": "In Progress"}, {"id": "option_3", "value": "Completed"}]}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -3778,7 +3778,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}]}
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}]}]}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -3815,7 +3815,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_1", "value": "Not Started"}, {"id": "option_2", "value": "In Progress"}, {"id": "option_3", "value": "Completed"}]}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -5517,7 +5517,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}]}
+          application/json: {"data": [{"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}, {"id": "option_123", "value": "Not Started"}]}]}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -5554,7 +5554,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": ["Not Started", "In Progress", "Completed", "Overdue"]}}
+          application/json: {"data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "type": {}, "options": [{"id": "option_1", "value": "Not Started"}, {"id": "option_2", "value": "In Progress"}, {"id": "option_3", "value": "Completed"}]}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -7288,7 +7288,7 @@ examples:
         path:
           id: "<id>"
         query:
-          fields: "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference"
+          fields: "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference,time_spent"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
         header:
           x-account-id: "<id>"
@@ -7327,7 +7327,7 @@ examples:
         header:
           x-account-id: "<id>"
       requestBody:
-        application/json: {"passthrough": {"other_known_names": "John Doe"}, "completed_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "learning_object_external_reference": "learning-content-123"}
+        application/json: {"passthrough": {"other_known_names": "John Doe"}, "completed_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "learning_object_external_reference": "learning-content-123", "time_spent": "PT1H30M45S"}
       responses:
         "201":
           application/json: {"statusCode": 201, "message": "Record created successfully.", "timestamp": "2021-01-01T01:01:01.000Z", "data": {"id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3"}}
@@ -7365,7 +7365,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "123456", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "completed_at": "2021-07-21T14:00:00.000Z", "created_at": "2021-07-21T14:00:00.000Z", "updated_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "remote_learning_object_id": "e3cb55bf-aa84-466e-a6c1-b8302b257a49", "learning_object_external_reference": "learning-content-123", "user_id": "c28xyrc55866bvuv", "remote_user_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}}
+          application/json: {"data": {"id": "123456", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "completed_at": "2021-07-21T14:00:00.000Z", "created_at": "2021-07-21T14:00:00.000Z", "updated_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "remote_learning_object_id": "e3cb55bf-aa84-466e-a6c1-b8302b257a49", "learning_object_external_reference": "learning-content-123", "user_id": "c28xyrc55866bvuv", "remote_user_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "time_spent": "PT1H30M45S"}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": [{"status": 400, "url": "https://api.provider.com/v1/resource", "raw": {}, "headers": {}}]}
         "401":
@@ -7429,7 +7429,7 @@ examples:
     speakeasy-default-lms-list-completions:
       parameters:
         query:
-          fields: "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference"
+          fields: "id,remote_id,external_id,remote_external_id,external_reference,content_id,remote_content_id,course_id,remote_course_id,user_id,remote_user_id,completed_at,updated_at,created_at,result,content_external_reference,learning_object_type,learning_object_id,remote_learning_object_id,learning_object_external_reference,time_spent"
           filter: {"updated_after": "2020-01-01T00:00:00.000Z"}
         header:
           x-account-id: "<id>"
@@ -7469,7 +7469,7 @@ examples:
           x-account-id: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "123456", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "completed_at": "2021-07-21T14:00:00.000Z", "created_at": "2021-07-21T14:00:00.000Z", "updated_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "remote_learning_object_id": "e3cb55bf-aa84-466e-a6c1-b8302b257a49", "learning_object_external_reference": "learning-content-123", "user_id": "c28xyrc55866bvuv", "remote_user_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48"}}
+          application/json: {"data": {"id": "123456", "remote_id": "8187e5da-dc77-475e-9949-af0f1fa4e4e3", "unified_custom_fields": {"my_project_custom_field_1": "REF-1236", "my_project_custom_field_2": "some other value"}, "completed_at": "2021-07-21T14:00:00.000Z", "created_at": "2021-07-21T14:00:00.000Z", "updated_at": "2021-07-21T14:00:00.000Z", "learning_object_id": "e3gd34-23tr21-er234-345er56", "remote_learning_object_id": "e3cb55bf-aa84-466e-a6c1-b8302b257a49", "learning_object_external_reference": "learning-content-123", "user_id": "c28xyrc55866bvuv", "remote_user_id": "e3cb75bf-aa84-466e-a6c1-b8322b257a48", "time_spent": "PT1H30M45S"}}
         "400":
           application/json: {"statusCode": 400, "message": "Bad Request", "timestamp": "2023-05-30T00:00:00.000Z", "data": {"statusCode": 400, "message": "Bad Request", "headers": {}}, "provider_errors": null}
         "401":

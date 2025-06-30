@@ -111,3 +111,11 @@ Based on:
 - Speakeasy CLI 1.561.0 (2.628.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [postman v0.2.0] .
+
+## 2025-06-30 00:17:31
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.571.2 (2.640.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [postman v0.2.1] .
