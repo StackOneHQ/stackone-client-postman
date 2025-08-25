@@ -1,4 +1,4 @@
-speakeasyVersion: 1.561.0
+speakeasyVersion: 1.606.3
 sources:
     hris:
         sourceNamespace: hris
@@ -8,18 +8,18 @@ sources:
             - latest
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:d63c250a9e3a1e4eab1fc48573dd284c9a0e4d5b84843d444fa9891adbe88d11
-        sourceBlobDigest: sha256:7dab4657be47ad2334caea43b0cd9f9c72b23524e349551cfa054da465c6fd9c
+        sourceRevisionDigest: sha256:dbcf1cdf389d7a31491d74b53943e29a5ccb927e59632424ac17970e9bf86bb4
+        sourceBlobDigest: sha256:6d3e543a4ff88a42a53063e42e4f0519da3caa560164d78c104600b6be349465
         tags:
             - latest
-            - speakeasy-sdk-regen-1739578432
+            - speakeasy-sdk-regen-1750119385
             - 1.0.0
 targets:
     my-first-target:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:d63c250a9e3a1e4eab1fc48573dd284c9a0e4d5b84843d444fa9891adbe88d11
-        sourceBlobDigest: sha256:7dab4657be47ad2334caea43b0cd9f9c72b23524e349551cfa054da465c6fd9c
+        sourceRevisionDigest: sha256:dbcf1cdf389d7a31491d74b53943e29a5ccb927e59632424ac17970e9bf86bb4
+        sourceBlobDigest: sha256:6d3e543a4ff88a42a53063e42e4f0519da3caa560164d78c104600b6be349465
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -33,6 +33,11 @@ workflow:
                 - location: https://api.eu1.stackone.com/oas/iam.json
                 - location: https://api.eu1.stackone.com/oas/marketing.json
                 - location: https://api.eu1.stackone.com/oas/lms.json
+                - location: https://api.eu1.stackone.com/oas/ticketing.json
+                - location: https://api.eu1.stackone.com/oas/documents.json
+                - location: https://api.eu1.stackone.com/oas/screening.json
+                - location: https://api.eu1.stackone.com/oas/messaging.json
+                - location: https://api.eu1.stackone.com/oas/accounting.json
             registry:
                 location: registry.speakeasyapi.dev/stackone/stackone/my-source
     targets:
