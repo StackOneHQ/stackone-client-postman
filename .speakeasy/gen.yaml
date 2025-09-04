@@ -16,8 +16,12 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
 postman:
-  version: 0.2.0
+  version: 0.2.1
   baseErrorName: StackOneError
   defaultErrorName: StackOneDefaultError
   imports:
