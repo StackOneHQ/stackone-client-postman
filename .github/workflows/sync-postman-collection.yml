@@ -6,15 +6,9 @@ on:
       - main
     paths:
       - 'StackOne_postman_collection.json'
-  pull_request:
-    types: [closed]
-    paths:
-      - 'StackOne_postman_collection.json'
 
 jobs:
   sync-postman:
-    # Only run when PR is merged or direct push to main
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     
     steps:

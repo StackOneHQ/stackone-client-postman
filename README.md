@@ -40,7 +40,7 @@ To enable automatic synchronization, you need to configure the following GitHub 
 
 ### How It Works
 
-- The workflow triggers when changes to `StackOne_postman_collection.json` are pushed to the main branch or when a PR containing changes to this file is merged
+- The workflow triggers when changes to `StackOne_postman_collection.json` are pushed to the main branch (including PR merges)
 - If a collection named "StackOne" exists in your workspace, it will be updated
 - If no collection exists, a new one will be created
 - The workflow uses the official Postman API for all operations
