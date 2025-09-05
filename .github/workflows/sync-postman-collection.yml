@@ -1,0 +1,125 @@
+name: Sync Postman Collection
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'StackOne_postman_collection.json'
+
+jobs:
+  sync-postman:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Newman (Postman CLI)
+        run: npm install -g newman
+      
+      - name: Check if collection exists in Postman
+        id: check_collection
+        env:
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          POSTMAN_WORKSPACE_ID: ${{ secrets.POSTMAN_WORKSPACE_ID }}
+        run: |
+          # Get all collections in workspace
+          response=$(curl -s -X GET \
+            "https://api.getpostman.com/collections?workspace=$POSTMAN_WORKSPACE_ID" \
+            -H "X-Api-Key: $POSTMAN_API_KEY")
+          
+          # Check if StackOne collection exists
+          collection_uid=$(echo "$response" | jq -r '.collections[] | select(.name == "StackOne") | .uid' | head -1)
+          
+          if [ -n "$collection_uid" ]; then
+            echo "Collection exists with UID: $collection_uid"
+            echo "collection_exists=true" >> $GITHUB_OUTPUT
+            echo "collection_uid=$collection_uid" >> $GITHUB_OUTPUT
+          else
+            echo "Collection does not exist"
+            echo "collection_exists=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Update existing collection
+        if: steps.check_collection.outputs.collection_exists == 'true'
+        env:
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          COLLECTION_UID: ${{ steps.check_collection.outputs.collection_uid }}
+        run: |
+          # Read the collection file
+          collection_json=$(cat StackOne_postman_collection.json)
+          
+          # Update the existing collection
+          response=$(curl -s -w "\n%{http_code}" -X PUT \
+            "https://api.getpostman.com/collections/$COLLECTION_UID" \
+            -H "X-Api-Key: $POSTMAN_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "{\"collection\": $collection_json}")
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          if [ "$http_code" -eq 200 ]; then
+            echo "✅ Successfully updated collection"
+            echo "$body" | jq '.'
+          else
+            echo "❌ Failed to update collection. HTTP Code: $http_code"
+            echo "Response: $body"
+            exit 1
+          fi
+      
+      - name: Create new collection
+        if: steps.check_collection.outputs.collection_exists == 'false'
+        env:
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          POSTMAN_WORKSPACE_ID: ${{ secrets.POSTMAN_WORKSPACE_ID }}
+        run: |
+          # Read the collection file
+          collection_json=$(cat StackOne_postman_collection.json)
+          
+          # Create new collection
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://api.getpostman.com/collections?workspace=$POSTMAN_WORKSPACE_ID" \
+            -H "X-Api-Key: $POSTMAN_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "{\"collection\": $collection_json}")
+          
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          if [ "$http_code" -eq 200 ]; then
+            echo "✅ Successfully created new collection"
+            echo "$body" | jq '.'
+          else
+            echo "❌ Failed to create collection. HTTP Code: $http_code"
+            echo "Response: $body"
+            exit 1
+          fi
+      
+      - name: Verify sync
+        env:
+          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
+          POSTMAN_WORKSPACE_ID: ${{ secrets.POSTMAN_WORKSPACE_ID }}
+        run: |
+          echo "🔍 Verifying collection sync..."
+          
+          # Get collections again to verify
+          response=$(curl -s -X GET \
+            "https://api.getpostman.com/collections?workspace=$POSTMAN_WORKSPACE_ID" \
+            -H "X-Api-Key: $POSTMAN_API_KEY")
+          
+          stackone_collection=$(echo "$response" | jq '.collections[] | select(.name == "StackOne")')
+          
+          if [ -n "$stackone_collection" ]; then
+            echo "✅ Collection verified in workspace"
+            echo "$stackone_collection" | jq '.'
+          else
+            echo "❌ Collection not found after sync"
+            exit 1
+          fi
