@@ -22,6 +22,29 @@ To use the Postman collection, follow these steps:
 - **Collection Name:** StackOne
 - **Schema Version:** [Postman Collection Schema v2.1.0](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
 
+## Automated Sync to Postman
+
+This repository includes a GitHub workflow that automatically syncs the Postman collection to your Postman workspace when changes are merged to the main branch.
+
+### Setup Requirements
+
+To enable automatic synchronization, you need to configure the following GitHub secrets in your repository:
+
+1. **`POSTMAN_API_KEY`**: Your Postman API key
+   - Generate from: [Postman Account Settings](https://postman.co/settings/me/api-keys)
+   - Required permissions: Collection management
+
+2. **`POSTMAN_WORKSPACE_ID`**: Your Postman workspace ID
+   - Find in Postman: Go to your workspace → Settings → Info → Workspace ID
+   - Or via API: `GET https://api.getpostman.com/workspaces`
+
+### How It Works
+
+- The workflow triggers when changes to `StackOne_postman_collection.json` are pushed to the main branch or when a PR containing changes to this file is merged
+- If a collection named "StackOne" exists in your workspace, it will be updated
+- If no collection exists, a new one will be created
+- The workflow uses the official Postman API for all operations
+
 ## Contributing
 
 If you find any issues or have suggestions for improvements, please submit an issue or pull request on this repository.
