@@ -7,6 +7,7 @@
 > |------------|-------------|
 > | [StackOne Platform API](https://www.postman.com/stackonehq/stackone-public/collection/4952c776-0324-491c-b597-3b6a4f78e2cb) | Platform endpoints — auto-synced daily |
 > | [StackOne Legacy APIs](https://www.postman.com/stackonehq/stackone-public/collection/8d04033a-b6b1-4c91-8235-729f5c46123a) | Unified vertical APIs (HRIS, ATS, CRM, etc.) |
+> | [StackOne MCP](https://www.postman.com/stackonehq/stackone-public/collection/68ca4160009b6f9cc908f435) | MCP server endpoints |
 > | [StackOne RPC](https://www.postman.com/stackonehq/stackone-public/collection/2769b147-79c3-40ea-bec9-d2854876f735) | Actions RPC endpoints |
 >
 > [![View on Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/stackonehq/stackone-public)
